@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECF1-CVTHEQUE-M-BECQUER", "ECF1-CVTHEQUE-M-BECQUER.csproj", "{2833F675-CB66-461D-87BA-437BD5DB71A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2833F675-CB66-461D-87BA-437BD5DB71A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2833F675-CB66-461D-87BA-437BD5DB71A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2833F675-CB66-461D-87BA-437BD5DB71A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2833F675-CB66-461D-87BA-437BD5DB71A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75D42584-79BE-4EAF-A96E-2D94D95DF69D}
+	EndGlobalSection
+EndGlobal
