@@ -16,5 +16,11 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
             InitializeComponent();
         }
+
+        private void BtnValiderModifCandidat_Click(object sender, EventArgs e)
+        {
+
+     
+        }
     }
 }

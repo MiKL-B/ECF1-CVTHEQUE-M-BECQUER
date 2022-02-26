@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnExport = new System.Windows.Forms.Button();
+            this.BtnModifCandidat = new System.Windows.Forms.Button();
+            this.BtnAjoutCandidat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,9 +52,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnExport);
+            this.panel1.Controls.Add(this.BtnModifCandidat);
+            this.panel1.Controls.Add(this.BtnAjoutCandidat);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -63,38 +63,38 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // BtnExport
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(913, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "EXPORT";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.BtnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExport.Location = new System.Drawing.Point(930, 15);
+            this.BtnExport.Name = "BtnExport";
+            this.BtnExport.Size = new System.Drawing.Size(120, 23);
+            this.BtnExport.TabIndex = 7;
+            this.BtnExport.Text = "&EXPORT";
+            this.BtnExport.UseVisualStyleBackColor = true;
+            this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
             // 
-            // button3
+            // BtnModifCandidat
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(744, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "AJOUT CANDIDAT";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BtnModifCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnModifCandidat.Location = new System.Drawing.Point(553, 15);
+            this.BtnModifCandidat.Name = "BtnModifCandidat";
+            this.BtnModifCandidat.Size = new System.Drawing.Size(174, 23);
+            this.BtnModifCandidat.TabIndex = 6;
+            this.BtnModifCandidat.Text = "&MODIFICATION CANDIDAT";
+            this.BtnModifCandidat.UseVisualStyleBackColor = true;
+            this.BtnModifCandidat.Click += new System.EventHandler(this.BtnModifCandidat_Click);
             // 
-            // button2
+            // BtnAjoutCandidat
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(553, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "MODIFICATION CANDIDAT";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnAjoutCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAjoutCandidat.Location = new System.Drawing.Point(733, 15);
+            this.BtnAjoutCandidat.Name = "BtnAjoutCandidat";
+            this.BtnAjoutCandidat.Size = new System.Drawing.Size(174, 23);
+            this.BtnAjoutCandidat.TabIndex = 5;
+            this.BtnAjoutCandidat.Text = "&AJOUT CANDIDAT";
+            this.BtnAjoutCandidat.UseVisualStyleBackColor = true;
+            this.BtnAjoutCandidat.Click += new System.EventHandler(this.BtnAjoutCandidat_Click);
             // 
             // label1
             // 
@@ -221,10 +221,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn profile;
         private System.Windows.Forms.DataGridViewTextBoxColumn skill;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnAjoutCandidat;
+        private System.Windows.Forms.Button BtnModifCandidat;
+        private System.Windows.Forms.Button BtnExport;
     }
 }
 
