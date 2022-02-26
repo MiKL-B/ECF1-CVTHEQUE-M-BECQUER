@@ -12,6 +12,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class Form1 : Form
     {
+     
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +30,38 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Instanciation du formulaire modification candidat
+            ModificationCandidat modificationCandidat = new ModificationCandidat();
+            //Affichage du formulaire au click
+            modificationCandidat.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Instanciation du formulaire ajoutCandidat
+            AjoutCandidat ajoutCandidat = new AjoutCandidat();
+            //Affichage du formulaire au click
+            ajoutCandidat.ShowDialog();
 
         }
     }
