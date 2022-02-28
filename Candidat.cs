@@ -40,11 +40,11 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         public Candidat(string rowData)
         {
-            //séparer les datas qui sont séparées par des point virgule
+           // séparer les datas qui sont séparées par des point virgule
             string[] data = rowData.Split(';');
             for (int i = 0; i < data.Length; i++)
             {
-                if (data[i] == "NULL" )
+                if (data[i] == "NULL")
                 {
                     data[i] = null;
                 }
@@ -58,8 +58,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             string birthDay = string.Join("/", Convert.ToInt32(birth[0]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[2]));
             //Console.WriteLine(birthDay);
 
-      
-            // parse data en propriété
+
+           // parse data en propriété
             this.Id = Convert.ToInt32(data[0]);
             this.LastName = data[1];
             this.FirstName = data[2];

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,16 +18,22 @@ namespace ECF1_CVTHEQUE_M_BECQUER
      
         public Form1()
         {
+          
             InitializeComponent();
+       
             //lit le contenu du fichier CSV ligne par ligne
             string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\User-15\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
 
-            //List des candidats
+            ////List des candidats
             var candidats = new List<Candidat>();
 
             //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
             //instanciations des candidats
-         
+
+
+
+
+
             for (int i = 1; i < csvLines.Length; i++)
             {
                 Candidat candidat = new Candidat(csvLines[i]);
@@ -33,8 +42,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //remplissage du tableau
             for (int i = 0; i < candidats.Count; i++)
             {
-           
-           
+
+          
                 this.dataGridView1.Rows.Add(
                     candidats[i].Id,
                     candidats[i].LastName,
@@ -64,29 +73,25 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].ViadeoProfil,
                     candidats[i].FacebookProfil
                     );
-             
+
             }
 
         }
-
+      
+   
+     
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
 
@@ -105,10 +110,69 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //Affichage du formulaire au click
             modificationCandidat.ShowDialog();
         }
-   
+
+        //exporter en csv
         private void BtnExport_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+               
+                string csv = string.Empty;
+
+                //ajout des colonnes
+                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                {
+                    csv += column.HeaderText + ',';
+                }
+
+                //ajout retour a la ligne.
+                csv += "\r\n";
+
+                //ajout de lignes
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null)
+                        {
+                            //ajout des datas
+                            csv += cell.Value.ToString().TrimEnd(',').Replace(",", ";") + ',';
+                        }
+                    
+                    }
+
+                    csv += "\r\n";
+                }
+
+                //export
+                string folderPath = "C:\\CSV\\";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+                File.WriteAllText(folderPath + "dataExport.csv", csv);
+                MessageBox.Show("");
+            }
+            catch
+            {
+                MessageBox.Show("");
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //double click pour afficher le cv  ( edge pour pdf , word pour docx)
+            //string filename = @"C:\Users\User-15\Desktop\faits\2.pdf";
+            //System.Diagnostics.Process.Start(filename);
+
+            //récupération de l'id de la ligne cliquée
+            if(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+               // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+            }
+            Console.WriteLine("test");
         }
     }
 }

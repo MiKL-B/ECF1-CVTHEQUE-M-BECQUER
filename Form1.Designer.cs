@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnExport = new System.Windows.Forms.Button();
             this.BtnModifCandidat = new System.Windows.Forms.Button();
             this.BtnAjoutCandidat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodePostal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ville = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SmartPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skill1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skill2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skill3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,16 +64,22 @@
             this.Skill10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WebSite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProfilViadeo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TxtSearch);
             this.panel1.Controls.Add(this.BtnExport);
             this.panel1.Controls.Add(this.BtnModifCandidat);
             this.panel1.Controls.Add(this.BtnAjoutCandidat);
@@ -79,14 +87,33 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1062, 51);
+            this.panel1.Size = new System.Drawing.Size(1357, 51);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(535, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "Rechercher :";
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtSearch.Location = new System.Drawing.Point(650, 17);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(144, 20);
+            this.TxtSearch.TabIndex = 61;
             // 
             // BtnExport
             // 
             this.BtnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExport.Location = new System.Drawing.Point(930, 15);
+            this.BtnExport.Location = new System.Drawing.Point(1225, 15);
             this.BtnExport.Name = "BtnExport";
             this.BtnExport.Size = new System.Drawing.Size(120, 23);
             this.BtnExport.TabIndex = 7;
@@ -97,7 +124,7 @@
             // BtnModifCandidat
             // 
             this.BtnModifCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifCandidat.Location = new System.Drawing.Point(553, 15);
+            this.BtnModifCandidat.Location = new System.Drawing.Point(848, 15);
             this.BtnModifCandidat.Name = "BtnModifCandidat";
             this.BtnModifCandidat.Size = new System.Drawing.Size(174, 23);
             this.BtnModifCandidat.TabIndex = 6;
@@ -108,7 +135,7 @@
             // BtnAjoutCandidat
             // 
             this.BtnAjoutCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAjoutCandidat.Location = new System.Drawing.Point(733, 15);
+            this.BtnAjoutCandidat.Location = new System.Drawing.Point(1028, 15);
             this.BtnAjoutCandidat.Name = "BtnAjoutCandidat";
             this.BtnAjoutCandidat.Size = new System.Drawing.Size(174, 23);
             this.BtnAjoutCandidat.TabIndex = 5;
@@ -129,38 +156,34 @@
             this.label1.Text = "CV THEQUE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(12, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1047, 697);
-            this.panel3.TabIndex = 0;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 51);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(10);
+            this.panel2.Size = new System.Drawing.Size(1357, 416);
+            this.panel2.TabIndex = 1;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.lastName,
-            this.firstName,
+            this.LastName,
+            this.FirstName,
             this.Age,
-            this.birthDate,
+            this.BirthDate,
             this.Address,
             this.Address1,
             this.CodePostal,
             this.Ville,
             this.SmartPhone,
             this.Phone,
-            this.email,
-            this.profile,
+            this.Email,
+            this.Profil,
             this.Skill1,
             this.Skill2,
             this.Skill3,
@@ -173,56 +196,38 @@
             this.Skill10,
             this.WebSite,
             this.LinkedinProfil,
-            this.ProfilViadeo,
+            this.ViadeoProfil,
             this.FacebookProfil});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1059, 952);
+            this.dataGridView1.Size = new System.Drawing.Size(1335, 390);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 51);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(1062, 710);
-            this.panel2.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Id
             // 
-            this.Id.HeaderText = "Id";
+            this.Id.HeaderText = "id";
             this.Id.Name = "Id";
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Id.Width = 50;
             // 
-            // lastName
+            // LastName
             // 
-            this.lastName.HeaderText = "Nom";
-            this.lastName.Name = "lastName";
-            this.lastName.Width = 50;
+            this.LastName.HeaderText = "Nom";
+            this.LastName.Name = "LastName";
             // 
-            // firstName
+            // FirstName
             // 
-            this.firstName.HeaderText = "Prénom";
-            this.firstName.Name = "firstName";
-            this.firstName.Width = 50;
+            this.FirstName.HeaderText = "Prénom";
+            this.FirstName.Name = "FirstName";
             // 
             // Age
             // 
             this.Age.HeaderText = "Age";
             this.Age.Name = "Age";
-            this.Age.Width = 50;
             // 
-            // birthDate
+            // BirthDate
             // 
-            this.birthDate.HeaderText = "Date de naissance";
-            this.birthDate.Name = "birthDate";
-            this.birthDate.Width = 50;
+            this.BirthDate.HeaderText = "Date de naissance";
+            this.BirthDate.Name = "BirthDate";
             // 
             // Address
             // 
@@ -231,12 +236,12 @@
             // 
             // Address1
             // 
-            this.Address1.HeaderText = "Adresse1";
+            this.Address1.HeaderText = "Adresse 1";
             this.Address1.Name = "Address1";
             // 
             // CodePostal
             // 
-            this.CodePostal.HeaderText = "Code Postal";
+            this.CodePostal.HeaderText = "Code postal";
             this.CodePostal.Name = "CodePostal";
             // 
             // Ville
@@ -246,113 +251,107 @@
             // 
             // SmartPhone
             // 
-            this.SmartPhone.HeaderText = "Numéro de téléphone portable";
+            this.SmartPhone.HeaderText = "Portable";
             this.SmartPhone.Name = "SmartPhone";
             // 
             // Phone
             // 
-            this.Phone.HeaderText = "Numéro de tel fixe";
+            this.Phone.HeaderText = "Fixe";
             this.Phone.Name = "Phone";
             // 
-            // email
+            // Email
             // 
-            this.email.HeaderText = "Email personnel";
-            this.email.Name = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
             // 
-            // profile
+            // Profil
             // 
-            this.profile.HeaderText = "Profil recherché";
-            this.profile.Name = "profile";
+            this.Profil.HeaderText = "Profil";
+            this.Profil.Name = "Profil";
             // 
             // Skill1
             // 
-            this.Skill1.HeaderText = "Compétence1";
+            this.Skill1.HeaderText = "Comp1";
             this.Skill1.Name = "Skill1";
-            this.Skill1.Width = 50;
             // 
             // Skill2
             // 
-            this.Skill2.HeaderText = "Compétence2";
+            this.Skill2.HeaderText = "Comp2";
             this.Skill2.Name = "Skill2";
-            this.Skill2.Width = 50;
             // 
             // Skill3
             // 
-            this.Skill3.HeaderText = "Compétence3";
+            this.Skill3.HeaderText = "Skill3";
             this.Skill3.Name = "Skill3";
-            this.Skill3.Width = 50;
             // 
             // Skill4
             // 
-            this.Skill4.HeaderText = "Compétence4";
+            this.Skill4.HeaderText = "Comp4";
             this.Skill4.Name = "Skill4";
-            this.Skill4.Width = 50;
             // 
             // Skill5
             // 
-            this.Skill5.HeaderText = "Compétence5";
+            this.Skill5.HeaderText = "Comp5";
             this.Skill5.Name = "Skill5";
-            this.Skill5.Width = 50;
             // 
             // Skill6
             // 
-            this.Skill6.HeaderText = "Compétence6";
+            this.Skill6.HeaderText = "Comp6";
             this.Skill6.Name = "Skill6";
-            this.Skill6.Width = 50;
             // 
             // Skill7
             // 
-            this.Skill7.HeaderText = "Compétence7";
+            this.Skill7.HeaderText = "Comp7";
             this.Skill7.Name = "Skill7";
-            this.Skill7.Width = 50;
             // 
             // Skill8
             // 
-            this.Skill8.HeaderText = "Compétence8";
+            this.Skill8.HeaderText = "Comp8";
             this.Skill8.Name = "Skill8";
-            this.Skill8.Width = 50;
             // 
             // Skill9
             // 
-            this.Skill9.HeaderText = "Compétence9";
+            this.Skill9.HeaderText = "Comp9";
             this.Skill9.Name = "Skill9";
-            this.Skill9.Width = 50;
             // 
             // Skill10
             // 
-            this.Skill10.HeaderText = "Compétence10";
+            this.Skill10.HeaderText = "Comp10";
             this.Skill10.Name = "Skill10";
-            this.Skill10.Width = 50;
             // 
             // WebSite
             // 
             this.WebSite.HeaderText = "Site web";
             this.WebSite.Name = "WebSite";
-            this.WebSite.Width = 50;
             // 
             // LinkedinProfil
             // 
-            this.LinkedinProfil.HeaderText = "Profil Linkedin";
+            this.LinkedinProfil.HeaderText = "Linkedin";
             this.LinkedinProfil.Name = "LinkedinProfil";
-            this.LinkedinProfil.Width = 50;
             // 
-            // ProfilViadeo
+            // ViadeoProfil
             // 
-            this.ProfilViadeo.HeaderText = "Profil Viadeo";
-            this.ProfilViadeo.Name = "ProfilViadeo";
-            this.ProfilViadeo.Width = 50;
+            this.ViadeoProfil.HeaderText = "Viadeo";
+            this.ViadeoProfil.Name = "ViadeoProfil";
             // 
             // FacebookProfil
             // 
-            this.FacebookProfil.HeaderText = "Profil Facebook";
+            this.FacebookProfil.HeaderText = "Facebook";
             this.FacebookProfil.Name = "FacebookProfil";
-            this.FacebookProfil.Width = 50;
+            // 
+            // candidatBindingSource
+            // 
+            this.candidatBindingSource.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
+            // 
+            // candidatBindingSource1
+            // 
+            this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 761);
+            this.ClientSize = new System.Drawing.Size(1357, 467);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -361,8 +360,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -371,26 +372,82 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Button BtnAjoutCandidat;
         private System.Windows.Forms.Button BtnModifCandidat;
         private System.Windows.Forms.Button BtnExport;
+        private System.Windows.Forms.TextBox TxtSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codePostalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn villeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn smartPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill4DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill5DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill6DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill7DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill8DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill9DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skill10DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn webSiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn linkedinProfilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viadeoProfilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facebookProfilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource candidatBindingSource;
+        private System.Windows.Forms.BindingSource candidatBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodePostal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ville;
         private System.Windows.Forms.DataGridViewTextBoxColumn SmartPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn profile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Profil;
         private System.Windows.Forms.DataGridViewTextBoxColumn Skill1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Skill2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Skill3;
@@ -403,7 +460,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Skill10;
         private System.Windows.Forms.DataGridViewTextBoxColumn WebSite;
         private System.Windows.Forms.DataGridViewTextBoxColumn LinkedinProfil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProfilViadeo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ViadeoProfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn FacebookProfil;
     }
 }
