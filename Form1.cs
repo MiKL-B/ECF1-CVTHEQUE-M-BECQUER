@@ -31,9 +31,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
             //instanciations des candidats
 
-
-
-
             for (int i = 1; i < csvLines.Length; i++)
             {
                 Candidat candidat = new Candidat(csvLines[i]);
@@ -43,7 +40,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //remplissage du tableau
             for (int i = 0; i < candidats.Count; i++)
             {
-
                 this.dataGridView1.Rows.Add(
                     candidats[i].Id,
                     candidats[i].LastName,
@@ -73,12 +69,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].ViadeoProfil,
                     candidats[i].FacebookProfil
                     );
-
             }
-
         }
-      
-     
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
@@ -86,14 +78,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         private void label1_Click(object sender, EventArgs e)
         {
         }
-
-     
-
         private void Form1_Load(object sender, EventArgs e)
         {
         }
-
-
         private void BtnAjoutCandidat_Click(object sender, EventArgs e)
         {
             //Instanciation du formulaire ajout candidat
@@ -107,8 +94,15 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //Instanciation du formulaire modification candidat
             ModificationCandidat modificationCandidat = new ModificationCandidat();
             //Affichage du formulaire au click
-            modificationCandidat.ShowDialog();
-       
+
+
+           
+
+         
+            // modificationCandidat.LastNameModif;
+
+            //modificationCandidat.ShowDialog();
+            //= dataGridView1.CurrentCell.ToString();
         }
 
         //exporter en csv
@@ -168,8 +162,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //double click pour afficher le cv  ( edge pour pdf , word pour docx)
-
-
             //récupération de l'id de la ligne cliquée
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
@@ -186,7 +178,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".docx";
                 }
                 //Console.WriteLine(filename);
-                System.Diagnostics.Process.Start(filename);
+                //System.Diagnostics.Process.Start(filename);
                 //servira pour la modification du candidat
                 // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
                 //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
@@ -200,7 +192,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             {
                 dataGridView1.CurrentRow.Selected = true;
                 string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                //Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
+                Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
                 BtnModifCandidat.Enabled = true;
             }
         }

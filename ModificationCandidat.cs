@@ -12,7 +12,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class ModificationCandidat : Form
     {
-       
+        public string LastNameModif;
+        public string FirstNameModif;
         public ModificationCandidat()
         {
             InitializeComponent();
@@ -22,6 +23,12 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
 
      
+        }
+
+        private void ModificationCandidat_Load(object sender, EventArgs e)
+        {
+            TxtModifNom.Text = LastNameModif;
+      
         }
     }
 }

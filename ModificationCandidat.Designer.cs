@@ -585,6 +585,7 @@
             this.Name = "ModificationCandidat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificationCandidat";
+            this.Load += new System.EventHandler(this.ModificationCandidat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
