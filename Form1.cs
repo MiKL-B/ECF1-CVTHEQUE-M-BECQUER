@@ -32,7 +32,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //instanciations des candidats
 
 
-            TxtSearch.Text = "bidou";
 
 
             for (int i = 1; i < csvLines.Length; i++)
@@ -79,7 +78,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         }
       
-   
      
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -152,28 +150,34 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-                File.WriteAllText(folderPath + "dataExport.csv", csv);
-                MessageBox.Show("");
+
+                string fileExport = "dataExport.csv";
+
+                File.WriteAllText(folderPath + fileExport, csv);
+
+                //Console.WriteLine(folderPath + fileExport);
+                System.Diagnostics.Process.Start(folderPath + fileExport);
+                MessageBox.Show("fichier exporté");
             }
             catch
             {
-                MessageBox.Show("");
+                MessageBox.Show("[ERREUR]: fichier non exporté");
             }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //double click pour afficher le cv  ( edge pour pdf , word pour docx)
-        
+
 
             //récupération de l'id de la ligne cliquée
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dataGridView1.CurrentRow.Selected = true;
                 string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                string ext=" ";
+                string ext = " ";
                 string filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ext;
-                if(ext == ".pdf")
+                if (ext == ".pdf")
                 {
                     filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".pdf";
                 }
@@ -181,13 +185,13 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".docx";
                 }
-                Console.WriteLine(filename);
+                //Console.WriteLine(filename);
                 System.Diagnostics.Process.Start(filename);
                 //servira pour la modification du candidat
                 // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
-                Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
+                //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
             }
-      
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -196,7 +200,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             {
                 dataGridView1.CurrentRow.Selected = true;
                 string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                Console.WriteLine("[CLICK] ID:" +id + "\n pour modification candidat");
+                //Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
                 BtnModifCandidat.Enabled = true;
             }
         }
