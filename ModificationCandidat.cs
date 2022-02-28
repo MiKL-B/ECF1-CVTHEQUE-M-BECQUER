@@ -12,6 +12,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class ModificationCandidat : Form
     {
+       
         public ModificationCandidat()
         {
             InitializeComponent();

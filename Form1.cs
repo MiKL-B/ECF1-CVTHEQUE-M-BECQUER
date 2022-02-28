@@ -23,7 +23,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
        
             //lit le contenu du fichier CSV ligne par ligne
             string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\User-15\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
-
+            BtnModifCandidat.Enabled = false;
             ////List des candidats
             var candidats = new List<Candidat>();
 
@@ -109,6 +109,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             ModificationCandidat modificationCandidat = new ModificationCandidat();
             //Affichage du formulaire au click
             modificationCandidat.ShowDialog();
+       
         }
 
         //exporter en csv
@@ -169,10 +170,23 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             if(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dataGridView1.CurrentRow.Selected = true;
-                TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
-               // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+                string id = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+                //servira pour la modification du candidat
+                // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+                Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
             }
-            Console.WriteLine("test");
+      
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+                Console.WriteLine("[CLICK] ID:" +id + "\n pour modification candidat");
+                BtnModifCandidat.Enabled = true;
+            }
         }
     }
 }
