@@ -55,14 +55,10 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //séparation du jour, du mois et de l'année de la date de naissance
             string[] birth = data[4].Split('/');
             //concaténation du jour, du mois et de l'année de la date de naissance
-            string birthDay = string.Join("/", birth[0], birth[1], birth[2]);
+            string birthDay = string.Join("/", Convert.ToInt32(birth[0]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[2]));
             //Console.WriteLine(birthDay);
 
       
-
-
-
-
             // parse data en propriété
             this.Id = Convert.ToInt32(data[0]);
             this.LastName = data[1];

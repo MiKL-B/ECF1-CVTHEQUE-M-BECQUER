@@ -19,8 +19,12 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         private void BtnValiderAjoutCandidat_Click(object sender, EventArgs e)
         {
-            TxtIdentite.Text = TxtAjoutNom.Text + " " + TxtAjoutPrenom.Text;
+            TxtAjoutSkill4.Text = TxtAjoutNom.Text + " " + TxtAjoutPrenom.Text;
         }
 
+        private void AjoutCandidat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
