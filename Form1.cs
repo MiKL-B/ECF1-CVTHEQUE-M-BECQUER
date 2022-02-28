@@ -22,8 +22,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             InitializeComponent();
        
             //lit le contenu du fichier CSV ligne par ligne
-            string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\User-15\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
+            string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\micha\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
             BtnModifCandidat.Enabled = false;
+
             ////List des candidats
             var candidats = new List<Candidat>();
 
@@ -31,7 +32,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //instanciations des candidats
 
 
-
+            TxtSearch.Text = "bidou";
 
 
             for (int i = 1; i < csvLines.Length; i++)
@@ -39,11 +40,11 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 Candidat candidat = new Candidat(csvLines[i]);
                 candidats.Add(candidat);
             }
+
             //remplissage du tableau
             for (int i = 0; i < candidats.Count; i++)
             {
 
-          
                 this.dataGridView1.Rows.Add(
                     candidats[i].Id,
                     candidats[i].LastName,
@@ -163,14 +164,25 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //double click pour afficher le cv  ( edge pour pdf , word pour docx)
-            //string filename = @"C:\Users\User-15\Desktop\faits\2.pdf";
-            //System.Diagnostics.Process.Start(filename);
+        
 
             //récupération de l'id de la ligne cliquée
-            if(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dataGridView1.CurrentRow.Selected = true;
-                string id = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+                string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+                string ext=" ";
+                string filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ext;
+                if(ext == ".pdf")
+                {
+                    filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".pdf";
+                }
+                else
+                {
+                    filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".docx";
+                }
+                Console.WriteLine(filename);
+                System.Diagnostics.Process.Start(filename);
                 //servira pour la modification du candidat
                 // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
                 Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
