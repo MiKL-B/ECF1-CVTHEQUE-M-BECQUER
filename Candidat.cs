@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,13 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public int Age { get; set; }
-        public int BirthDate { get; set; }
+        public string BirthDate { get; set; }
         public string Address { get; set; } 
         public string Address1 { get; set; }
-        public int CodePostal { get; set; }
+        public string CodePostal { get; set; }
         public string Ville { get; set; }
-        public int SmartPhone { get; set; }
-        public int Phone { get; set; }
+        public string SmartPhone { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
         public string Profil { get; set; }
         public string Skill1 { get; set; }
@@ -31,7 +32,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         public string Skill8 { get; set; }
         public string Skill9 { get; set; }
         public string Skill10 { get; set; }
-
+     
         public string WebSite { get; set; }
         public string LinkedinProfil { get; set; }
         public string ViadeoProfil { get; set; }
@@ -41,20 +42,39 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
             //séparer les datas qui sont séparées par des point virgule
             string[] data = rowData.Split(';');
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (data[i] == "NULL" )
+                {
+                    data[i] = null;
+                }
+
+            }
+
+
+            //séparation du jour, du mois et de l'année de la date de naissance
+            string[] birth = data[4].Split('/');
+            //concaténation du jour, du mois et de l'année de la date de naissance
+            string birthDay = string.Join("/", birth[0], birth[1], birth[2]);
+            //Console.WriteLine(birthDay);
+
+      
+
+
 
 
             // parse data en propriété
             this.Id = Convert.ToInt32(data[0]);
             this.LastName = data[1];
             this.FirstName = data[2];
-            //this.Age = Convert.ToInt32(data[3]);
-            //this.BirthDate = Convert.ToInt32(data[4]);
+            this.Age = Convert.ToInt32(data[3]);
+            this.BirthDate = birthDay;
             this.Address = data[5];
             this.Address1 = data[6];
-            //this.CodePostal = Convert.ToInt32(data[7]);
+            this.CodePostal = data[7];
             this.Ville = data[8];
-            //this.SmartPhone = Convert.ToInt32(data[9]);
-            //this.Phone = Convert.ToInt32(data[10]);
+            this.SmartPhone = data[9];
+            this.Phone = data[10];
             this.Email = data[11];
             this.Profil = data[12];
             this.Skill1 = data[13];

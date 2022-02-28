@@ -17,13 +17,14 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
             InitializeComponent();
             //lit le contenu du fichier CSV ligne par ligne
-            string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\micha\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
+            string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\User-15\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
 
             //List des candidats
             var candidats = new List<Candidat>();
 
             //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
             //instanciations des candidats
+         
             for (int i = 1; i < csvLines.Length; i++)
             {
                 Candidat candidat = new Candidat(csvLines[i]);
@@ -32,19 +33,20 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //remplissage du tableau
             for (int i = 0; i < candidats.Count; i++)
             {
-                //Console.WriteLine(candidats[i]);
+           
+           
                 this.dataGridView1.Rows.Add(
                     candidats[i].Id,
                     candidats[i].LastName,
                     candidats[i].FirstName,
-                    "age",
-                    "birthdate",
+                    candidats[i].Age,
+                    candidats[i].BirthDate,
                     candidats[i].Address,
                     candidats[i].Address1,
-                    "code postal",
+                    candidats[i].CodePostal,
                     candidats[i].Ville,
-                    "smartphone",
-                    "fixe",
+                    candidats[i].SmartPhone,
+                    candidats[i].Phone,
                     candidats[i].Email,
                     candidats[i].Profil,
                     candidats[i].Skill1,
@@ -62,7 +64,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].ViadeoProfil,
                     candidats[i].FacebookProfil
                     );
+             
             }
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
