@@ -114,6 +114,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="1.docx" />
+    <None Include="10.pdf" />
+    <None Include="11.docx" />
+    <None Include="12.pdf" />
+    <None Include="13.docx" />
+    <None Include="14.docx" />
+    <None Include="2.pdf" />
+    <None Include="3.pdf" />
+    <None Include="4.docx" />
+    <None Include="5.pdf" />
+    <None Include="6.docx" />
+    <None Include="7.pdf" />
+    <None Include="8.pdf" />
+    <None Include="9.docx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Candidat.datasource" />
     <None Include="Properties\Settings.settings">

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -22,7 +23,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             InitializeComponent();
        
             //lit le contenu du fichier CSV ligne par ligne
-            string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\micha\source\repos\ECF1-CVTHEQUE-M-BECQUER\data\hrdata.csv");
+            string[] csvLines = System.IO.File.ReadAllLines(@"./data/hrdata.csv");
             BtnModifCandidat.Enabled = false;
 
             ////List des candidats
@@ -167,17 +168,24 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             {
                 dataGridView1.CurrentRow.Selected = true;
                 string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                string ext = " ";
-                string filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ext;
-                if (ext == ".pdf")
+
+                string filename = @"C:\Users\User-15\Desktop\faits\";
+                string filenamePdf = filename + id + ".pdf";
+
+                string filenameDocx = filename + id + ".docx";
+                try
                 {
-                    filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".pdf";
+                        Process.Start(filenamePdf);
                 }
-                else
+                catch
                 {
-                    filename = @"C:\Users\micha\OneDrive\Bureau\ECF1 CDA\cvs\faits\" + id + ".docx";
+                    
+                        Process.Start(filenameDocx);
+                    
+
+             
                 }
-                //Console.WriteLine(filename);
+                Console.WriteLine(filenamePdf);
                 //System.Diagnostics.Process.Start(filename);
                 //servira pour la modification du candidat
                 // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
