@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,6 @@
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -164,7 +164,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 51);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(1357, 416);
+            this.panel2.Size = new System.Drawing.Size(1357, 716);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -201,7 +201,7 @@
             this.FacebookProfil});
             this.dataGridView1.Location = new System.Drawing.Point(9, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1335, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(1335, 683);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -283,7 +283,7 @@
             // 
             // Skill3
             // 
-            this.Skill3.HeaderText = "Skill3";
+            this.Skill3.HeaderText = "Comp3";
             this.Skill3.Name = "Skill3";
             // 
             // Skill4
@@ -353,7 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 467);
+            this.ClientSize = new System.Drawing.Size(1357, 767);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -383,7 +383,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource candidatBindingSource;
         private System.Windows.Forms.BindingSource candidatBindingSource1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
@@ -411,6 +410,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LinkedinProfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn ViadeoProfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn FacebookProfil;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

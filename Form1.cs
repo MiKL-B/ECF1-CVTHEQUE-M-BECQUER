@@ -82,16 +82,16 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         }
         private void Form1_Load(object sender,  EventArgs e)
         {
-            AjoutCandidat ajoutCandidat = new AjoutCandidat();
-            dataGridView1.Rows[1].Cells[0].Value = ajoutCandidat.AjoutLastName;
+         
 
         }
         private void BtnAjoutCandidat_Click(object sender, EventArgs e)
         {
+
             //Instanciation du formulaire ajout candidat
-            AjoutCandidat ajoutCandidat = new AjoutCandidat();
+            AjoutCandidat ajoutCandidat = new AjoutCandidat(this);
             //Affichage du formulaire au click
-            ajoutCandidat.ShowDialog();
+            ajoutCandidat.Show();
            
         }
 
@@ -100,13 +100,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //Instanciation du formulaire modification candidat
             ModificationCandidat modificationCandidat = new ModificationCandidat();
             //Affichage du formulaire au click
-
-                Console.WriteLine(dataGridView1.Rows[1].Cells[0].Value);
-           modificationCandidat.LastNameModif = dataGridView1.Rows[0].Cells[1].Value.ToString(); 
-
-            //Console.WriteLine(modificationCandidat.LastNameModif);
             modificationCandidat.ShowDialog();
-            //= dataGridView1.CurrentCell.ToString();
+          
         }
 
         //exporter en csv
@@ -208,7 +203,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
                     Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
                     BtnModifCandidat.Enabled = true;
-
                 }
             }
             catch(Exception ex)
@@ -216,14 +210,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 Console.WriteLine(ex.Message);
             }
 
-
-            ////TEST
-            //index = e.RowIndex;
-            //AjoutCandidat ajoutCandidat = new AjoutCandidat();
-            //DataGridViewRow row = dataGridView1.Rows[index];
-            ////ajoutCandidat.AjoutLastName = row.Cells[1].Value.ToString();
-            //row.Cells[1].Value = ajoutCandidat.AjoutLastName;
-
+     
+            
+         
 
         }
     }
