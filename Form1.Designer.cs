@@ -29,6 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
@@ -39,6 +66,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +95,6 @@
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -206,141 +233,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "id";
-            this.Id.Name = "Id";
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "Nom";
-            this.LastName.Name = "LastName";
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "Prénom";
-            this.FirstName.Name = "FirstName";
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Age";
-            this.Age.Name = "Age";
-            // 
-            // BirthDate
-            // 
-            this.BirthDate.HeaderText = "Date de naissance";
-            this.BirthDate.Name = "BirthDate";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Adresse";
-            this.Address.Name = "Address";
-            // 
-            // Address1
-            // 
-            this.Address1.HeaderText = "Adresse 1";
-            this.Address1.Name = "Address1";
-            // 
-            // CodePostal
-            // 
-            this.CodePostal.HeaderText = "Code postal";
-            this.CodePostal.Name = "CodePostal";
-            // 
-            // Ville
-            // 
-            this.Ville.HeaderText = "Ville";
-            this.Ville.Name = "Ville";
-            // 
-            // SmartPhone
-            // 
-            this.SmartPhone.HeaderText = "Portable";
-            this.SmartPhone.Name = "SmartPhone";
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Fixe";
-            this.Phone.Name = "Phone";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Profil
-            // 
-            this.Profil.HeaderText = "Profil";
-            this.Profil.Name = "Profil";
-            // 
-            // Skill1
-            // 
-            this.Skill1.HeaderText = "Comp1";
-            this.Skill1.Name = "Skill1";
-            // 
-            // Skill2
-            // 
-            this.Skill2.HeaderText = "Comp2";
-            this.Skill2.Name = "Skill2";
-            // 
-            // Skill3
-            // 
-            this.Skill3.HeaderText = "Comp3";
-            this.Skill3.Name = "Skill3";
-            // 
-            // Skill4
-            // 
-            this.Skill4.HeaderText = "Comp4";
-            this.Skill4.Name = "Skill4";
-            // 
-            // Skill5
-            // 
-            this.Skill5.HeaderText = "Comp5";
-            this.Skill5.Name = "Skill5";
-            // 
-            // Skill6
-            // 
-            this.Skill6.HeaderText = "Comp6";
-            this.Skill6.Name = "Skill6";
-            // 
-            // Skill7
-            // 
-            this.Skill7.HeaderText = "Comp7";
-            this.Skill7.Name = "Skill7";
-            // 
-            // Skill8
-            // 
-            this.Skill8.HeaderText = "Comp8";
-            this.Skill8.Name = "Skill8";
-            // 
-            // Skill9
-            // 
-            this.Skill9.HeaderText = "Comp9";
-            this.Skill9.Name = "Skill9";
-            // 
-            // Skill10
-            // 
-            this.Skill10.HeaderText = "Comp10";
-            this.Skill10.Name = "Skill10";
-            // 
-            // WebSite
-            // 
-            this.WebSite.HeaderText = "Site web";
-            this.WebSite.Name = "WebSite";
-            // 
-            // LinkedinProfil
-            // 
-            this.LinkedinProfil.HeaderText = "Linkedin";
-            this.LinkedinProfil.Name = "LinkedinProfil";
-            // 
-            // ViadeoProfil
-            // 
-            this.ViadeoProfil.HeaderText = "Viadeo";
-            this.ViadeoProfil.Name = "ViadeoProfil";
-            // 
-            // FacebookProfil
-            // 
-            this.FacebookProfil.HeaderText = "Facebook";
-            this.FacebookProfil.Name = "FacebookProfil";
-            // 
             // candidatBindingSource
             // 
             this.candidatBindingSource.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
@@ -348,6 +240,195 @@
             // candidatBindingSource1
             // 
             this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
+            // 
+            // Id
+            // 
+            dataGridViewCellStyle1.NullValue = "NULL";
+            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Id.HeaderText = "id";
+            this.Id.Name = "Id";
+            // 
+            // LastName
+            // 
+            dataGridViewCellStyle2.NullValue = "NULL";
+            this.LastName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.LastName.HeaderText = "Nom";
+            this.LastName.Name = "LastName";
+            // 
+            // FirstName
+            // 
+            dataGridViewCellStyle3.NullValue = "NULL";
+            this.FirstName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FirstName.HeaderText = "Prénom";
+            this.FirstName.Name = "FirstName";
+            // 
+            // Age
+            // 
+            dataGridViewCellStyle4.NullValue = "NULL";
+            this.Age.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Age.HeaderText = "Age";
+            this.Age.Name = "Age";
+            // 
+            // BirthDate
+            // 
+            dataGridViewCellStyle5.NullValue = "NULL";
+            this.BirthDate.DefaultCellStyle = dataGridViewCellStyle5;
+            this.BirthDate.HeaderText = "Date de naissance";
+            this.BirthDate.Name = "BirthDate";
+            // 
+            // Address
+            // 
+            dataGridViewCellStyle6.NullValue = "NULL";
+            this.Address.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Address.HeaderText = "Adresse";
+            this.Address.Name = "Address";
+            // 
+            // Address1
+            // 
+            dataGridViewCellStyle7.NullValue = "NULL";
+            this.Address1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Address1.HeaderText = "Adresse 1";
+            this.Address1.Name = "Address1";
+            // 
+            // CodePostal
+            // 
+            dataGridViewCellStyle8.NullValue = "NULL";
+            this.CodePostal.DefaultCellStyle = dataGridViewCellStyle8;
+            this.CodePostal.HeaderText = "Code postal";
+            this.CodePostal.Name = "CodePostal";
+            // 
+            // Ville
+            // 
+            dataGridViewCellStyle9.NullValue = "NULL";
+            this.Ville.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Ville.HeaderText = "Ville";
+            this.Ville.Name = "Ville";
+            // 
+            // SmartPhone
+            // 
+            dataGridViewCellStyle10.NullValue = "NULL";
+            this.SmartPhone.DefaultCellStyle = dataGridViewCellStyle10;
+            this.SmartPhone.HeaderText = "Portable";
+            this.SmartPhone.Name = "SmartPhone";
+            // 
+            // Phone
+            // 
+            dataGridViewCellStyle11.NullValue = "NULL";
+            this.Phone.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Phone.HeaderText = "Fixe";
+            this.Phone.Name = "Phone";
+            // 
+            // Email
+            // 
+            dataGridViewCellStyle12.NullValue = "NULL";
+            this.Email.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Profil
+            // 
+            dataGridViewCellStyle13.NullValue = "NULL";
+            this.Profil.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Profil.HeaderText = "Profil";
+            this.Profil.Name = "Profil";
+            // 
+            // Skill1
+            // 
+            dataGridViewCellStyle14.NullValue = "NULL";
+            this.Skill1.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Skill1.HeaderText = "Comp1";
+            this.Skill1.Name = "Skill1";
+            // 
+            // Skill2
+            // 
+            dataGridViewCellStyle15.NullValue = "NULL";
+            this.Skill2.DefaultCellStyle = dataGridViewCellStyle15;
+            this.Skill2.HeaderText = "Comp2";
+            this.Skill2.Name = "Skill2";
+            // 
+            // Skill3
+            // 
+            dataGridViewCellStyle16.NullValue = "NULL";
+            this.Skill3.DefaultCellStyle = dataGridViewCellStyle16;
+            this.Skill3.HeaderText = "Comp3";
+            this.Skill3.Name = "Skill3";
+            // 
+            // Skill4
+            // 
+            dataGridViewCellStyle17.NullValue = "NULL";
+            this.Skill4.DefaultCellStyle = dataGridViewCellStyle17;
+            this.Skill4.HeaderText = "Comp4";
+            this.Skill4.Name = "Skill4";
+            // 
+            // Skill5
+            // 
+            dataGridViewCellStyle18.NullValue = "NULL";
+            this.Skill5.DefaultCellStyle = dataGridViewCellStyle18;
+            this.Skill5.HeaderText = "Comp5";
+            this.Skill5.Name = "Skill5";
+            // 
+            // Skill6
+            // 
+            dataGridViewCellStyle19.NullValue = "NULL";
+            this.Skill6.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Skill6.HeaderText = "Comp6";
+            this.Skill6.Name = "Skill6";
+            // 
+            // Skill7
+            // 
+            dataGridViewCellStyle20.NullValue = "NULL";
+            this.Skill7.DefaultCellStyle = dataGridViewCellStyle20;
+            this.Skill7.HeaderText = "Comp7";
+            this.Skill7.Name = "Skill7";
+            // 
+            // Skill8
+            // 
+            dataGridViewCellStyle21.NullValue = "NULL";
+            this.Skill8.DefaultCellStyle = dataGridViewCellStyle21;
+            this.Skill8.HeaderText = "Comp8";
+            this.Skill8.Name = "Skill8";
+            // 
+            // Skill9
+            // 
+            dataGridViewCellStyle22.NullValue = "NULL";
+            this.Skill9.DefaultCellStyle = dataGridViewCellStyle22;
+            this.Skill9.HeaderText = "Comp9";
+            this.Skill9.Name = "Skill9";
+            // 
+            // Skill10
+            // 
+            dataGridViewCellStyle23.NullValue = "NULL";
+            this.Skill10.DefaultCellStyle = dataGridViewCellStyle23;
+            this.Skill10.HeaderText = "Comp10";
+            this.Skill10.Name = "Skill10";
+            // 
+            // WebSite
+            // 
+            dataGridViewCellStyle24.NullValue = "NULL";
+            this.WebSite.DefaultCellStyle = dataGridViewCellStyle24;
+            this.WebSite.HeaderText = "Site web";
+            this.WebSite.Name = "WebSite";
+            // 
+            // LinkedinProfil
+            // 
+            dataGridViewCellStyle25.NullValue = "NULL";
+            this.LinkedinProfil.DefaultCellStyle = dataGridViewCellStyle25;
+            this.LinkedinProfil.HeaderText = "Linkedin";
+            this.LinkedinProfil.Name = "LinkedinProfil";
+            // 
+            // ViadeoProfil
+            // 
+            dataGridViewCellStyle26.NullValue = "NULL";
+            this.ViadeoProfil.DefaultCellStyle = dataGridViewCellStyle26;
+            this.ViadeoProfil.HeaderText = "Viadeo";
+            this.ViadeoProfil.Name = "ViadeoProfil";
+            // 
+            // FacebookProfil
+            // 
+            dataGridViewCellStyle27.NullValue = "NULL";
+            this.FacebookProfil.DefaultCellStyle = dataGridViewCellStyle27;
+            this.FacebookProfil.HeaderText = "Facebook";
+            this.FacebookProfil.Name = "FacebookProfil";
             // 
             // Form1
             // 
@@ -383,6 +464,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource candidatBindingSource;
         private System.Windows.Forms.BindingSource candidatBindingSource1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
@@ -410,7 +492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LinkedinProfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn ViadeoProfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn FacebookProfil;
-        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

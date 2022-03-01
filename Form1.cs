@@ -16,7 +16,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class Form1 : Form
     {
-        int index;
+     
         public Form1()
         {
         
@@ -29,6 +29,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
             ////List des candidats
             var candidats = new List<Candidat>();
+         
 
             //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
             //instanciations des candidats
@@ -91,7 +92,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //Instanciation du formulaire ajout candidat
             AjoutCandidat ajoutCandidat = new AjoutCandidat(this);
             //Affichage du formulaire au click
-            ajoutCandidat.Show();
+            ajoutCandidat.ShowDialog();
            
         }
 
@@ -111,7 +112,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             {
                
                 string csv = string.Empty;
-
+             
                 //ajout des colonnes
                 foreach (DataGridViewColumn column in dataGridView1.Columns)
                 {
@@ -149,7 +150,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 File.WriteAllText(folderPath + fileExport, csv);
 
                 //Console.WriteLine(folderPath + fileExport);
-                System.Diagnostics.Process.Start(folderPath + fileExport);
+                Process.Start(folderPath + fileExport);
                 MessageBox.Show("fichier exporté");
             }
             catch
@@ -168,8 +169,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     dataGridView1.CurrentRow.Selected = true;
                     string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-
-                    string filename = @"C:\Users\User-15\Desktop\faits\";
+                    string filename = @".\data\faits\";
                     string filenamePdf = filename + id + ".pdf";
                     string filenameDocx = filename + id + ".docx";
                     try
@@ -200,19 +200,16 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dataGridView1.CurrentRow.Selected = true;
-                    string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+                    string id = dataGridView1.Rows[e.RowIndex].Cells["LastName"].FormattedValue.ToString();
                     Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
                     BtnModifCandidat.Enabled = true;
+         
                 }
             }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
-     
-            
-         
 
         }
     }
