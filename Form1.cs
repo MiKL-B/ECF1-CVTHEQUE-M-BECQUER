@@ -16,14 +16,15 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class Form1 : Form
     {
-     
+        int index;
         public Form1()
         {
-          
+        
+           
             InitializeComponent();
-       
+      
             //lit le contenu du fichier CSV ligne par ligne
-            string[] csvLines = System.IO.File.ReadAllLines(@"./data/hrdata.csv");
+            string[] csvLines = File.ReadAllLines(@"./data/hrdata.csv");
             BtnModifCandidat.Enabled = false;
 
             ////List des candidats
@@ -79,8 +80,11 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         private void label1_Click(object sender, EventArgs e)
         {
         }
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender,  EventArgs e)
         {
+            AjoutCandidat ajoutCandidat = new AjoutCandidat();
+            dataGridView1.Rows[1].Cells[0].Value = ajoutCandidat.AjoutLastName;
+
         }
         private void BtnAjoutCandidat_Click(object sender, EventArgs e)
         {
@@ -88,6 +92,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             AjoutCandidat ajoutCandidat = new AjoutCandidat();
             //Affichage du formulaire au click
             ajoutCandidat.ShowDialog();
+           
         }
 
         private void BtnModifCandidat_Click(object sender, EventArgs e)
@@ -96,13 +101,11 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             ModificationCandidat modificationCandidat = new ModificationCandidat();
             //Affichage du formulaire au click
 
+                Console.WriteLine(dataGridView1.Rows[1].Cells[0].Value);
+           modificationCandidat.LastNameModif = dataGridView1.Rows[0].Cells[1].Value.ToString(); 
 
-           
-
-         
-            // modificationCandidat.LastNameModif;
-
-            //modificationCandidat.ShowDialog();
+            //Console.WriteLine(modificationCandidat.LastNameModif);
+            modificationCandidat.ShowDialog();
             //= dataGridView1.CurrentCell.ToString();
         }
 
@@ -164,45 +167,64 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
             //double click pour afficher le cv  ( edge pour pdf , word pour docx)
             //récupération de l'id de la ligne cliquée
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                dataGridView1.CurrentRow.Selected = true;
-                string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-
-                string filename = @"C:\Users\User-15\Desktop\faits\";
-                string filenamePdf = filename + id + ".pdf";
-
-                string filenameDocx = filename + id + ".docx";
-                try
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
+                    dataGridView1.CurrentRow.Selected = true;
+                    string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+
+                    string filename = @"C:\Users\User-15\Desktop\faits\";
+                    string filenamePdf = filename + id + ".pdf";
+                    string filenameDocx = filename + id + ".docx";
+                    try
+                    {
                         Process.Start(filenamePdf);
-                }
-                catch
-                {
-                    
+                    }
+                    catch
+                    {
                         Process.Start(filenameDocx);
-                    
-
-             
+                    }
+                    //servira pour la modification du candidat
+                    // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
+                    //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
                 }
-                Console.WriteLine(filenamePdf);
-                //System.Diagnostics.Process.Start(filename);
-                //servira pour la modification du candidat
-                // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
-                //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+          
 
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                dataGridView1.CurrentRow.Selected = true;
-                string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
-                BtnModifCandidat.Enabled = true;
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dataGridView1.CurrentRow.Selected = true;
+                    string id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+                    Console.WriteLine("[CLICK] ID:" + id + "\n pour modification candidat");
+                    BtnModifCandidat.Enabled = true;
+
+                }
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
+            ////TEST
+            //index = e.RowIndex;
+            //AjoutCandidat ajoutCandidat = new AjoutCandidat();
+            //DataGridViewRow row = dataGridView1.Rows[index];
+            ////ajoutCandidat.AjoutLastName = row.Cells[1].Value.ToString();
+            //row.Cells[1].Value = ajoutCandidat.AjoutLastName;
+
+
         }
     }
 }

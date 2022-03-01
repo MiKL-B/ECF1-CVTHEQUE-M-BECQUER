@@ -96,6 +96,7 @@
             // 
             // TxtAjoutNom
             // 
+            this.TxtAjoutNom.BackColor = System.Drawing.SystemColors.Window;
             this.TxtAjoutNom.Location = new System.Drawing.Point(35, 146);
             this.TxtAjoutNom.Name = "TxtAjoutNom";
             this.TxtAjoutNom.Size = new System.Drawing.Size(144, 20);
@@ -127,6 +128,7 @@
             // 
             // BtnValiderAjoutCandidat
             // 
+            this.BtnValiderAjoutCandidat.ForeColor = System.Drawing.Color.Black;
             this.BtnValiderAjoutCandidat.Location = new System.Drawing.Point(418, 586);
             this.BtnValiderAjoutCandidat.Name = "BtnValiderAjoutCandidat";
             this.BtnValiderAjoutCandidat.Size = new System.Drawing.Size(312, 41);
@@ -315,6 +317,7 @@
             // LblAjoutLinkedin
             // 
             this.LblAjoutLinkedin.AutoSize = true;
+            this.LblAjoutLinkedin.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutLinkedin.Location = new System.Drawing.Point(415, 254);
             this.LblAjoutLinkedin.Name = "LblAjoutLinkedin";
             this.LblAjoutLinkedin.Size = new System.Drawing.Size(47, 13);
@@ -334,6 +337,7 @@
             // LblAjoutAddress
             // 
             this.LblAjoutAddress.AutoSize = true;
+            this.LblAjoutAddress.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutAddress.Location = new System.Drawing.Point(32, 254);
             this.LblAjoutAddress.Name = "LblAjoutAddress";
             this.LblAjoutAddress.Size = new System.Drawing.Size(45, 13);
@@ -353,6 +357,7 @@
             // LblAjoutWebSite
             // 
             this.LblAjoutWebSite.AutoSize = true;
+            this.LblAjoutWebSite.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutWebSite.Location = new System.Drawing.Point(983, 119);
             this.LblAjoutWebSite.Name = "LblAjoutWebSite";
             this.LblAjoutWebSite.Size = new System.Drawing.Size(48, 13);
@@ -372,6 +377,7 @@
             // LblAjoutPhone
             // 
             this.LblAjoutPhone.AutoSize = true;
+            this.LblAjoutPhone.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutPhone.Location = new System.Drawing.Point(583, 185);
             this.LblAjoutPhone.Name = "LblAjoutPhone";
             this.LblAjoutPhone.Size = new System.Drawing.Size(44, 13);
@@ -401,6 +407,7 @@
             // LblAjoutSkill6
             // 
             this.LblAjoutSkill6.AutoSize = true;
+            this.LblAjoutSkill6.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutSkill6.Location = new System.Drawing.Point(983, 324);
             this.LblAjoutSkill6.Name = "LblAjoutSkill6";
             this.LblAjoutSkill6.Size = new System.Drawing.Size(76, 13);
@@ -420,6 +427,7 @@
             // LblAjoutViadeo
             // 
             this.LblAjoutViadeo.AutoSize = true;
+            this.LblAjoutViadeo.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutViadeo.Location = new System.Drawing.Point(415, 324);
             this.LblAjoutViadeo.Name = "LblAjoutViadeo";
             this.LblAjoutViadeo.Size = new System.Drawing.Size(40, 13);
@@ -429,6 +437,7 @@
             // LblAjoutAddress1
             // 
             this.LblAjoutAddress1.AutoSize = true;
+            this.LblAjoutAddress1.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutAddress1.Location = new System.Drawing.Point(32, 324);
             this.LblAjoutAddress1.Name = "LblAjoutAddress1";
             this.LblAjoutAddress1.Size = new System.Drawing.Size(54, 13);
@@ -438,6 +447,7 @@
             // LblAjoutSkill8
             // 
             this.LblAjoutSkill8.AutoSize = true;
+            this.LblAjoutSkill8.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutSkill8.Location = new System.Drawing.Point(983, 400);
             this.LblAjoutSkill8.Name = "LblAjoutSkill8";
             this.LblAjoutSkill8.Size = new System.Drawing.Size(76, 13);
@@ -447,6 +457,7 @@
             // LblAjoutVille
             // 
             this.LblAjoutVille.AutoSize = true;
+            this.LblAjoutVille.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutVille.Location = new System.Drawing.Point(138, 400);
             this.LblAjoutVille.Name = "LblAjoutVille";
             this.LblAjoutVille.Size = new System.Drawing.Size(26, 13);
@@ -456,6 +467,7 @@
             // LblAjoutSkill7
             // 
             this.LblAjoutSkill7.AutoSize = true;
+            this.LblAjoutSkill7.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutSkill7.Location = new System.Drawing.Point(813, 400);
             this.LblAjoutSkill7.Name = "LblAjoutSkill7";
             this.LblAjoutSkill7.Size = new System.Drawing.Size(76, 13);
@@ -465,6 +477,7 @@
             // LblAjoutFacebook
             // 
             this.LblAjoutFacebook.AutoSize = true;
+            this.LblAjoutFacebook.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutFacebook.Location = new System.Drawing.Point(415, 400);
             this.LblAjoutFacebook.Name = "LblAjoutFacebook";
             this.LblAjoutFacebook.Size = new System.Drawing.Size(55, 13);
@@ -474,6 +487,7 @@
             // LblAjoutCodePostal
             // 
             this.LblAjoutCodePostal.AutoSize = true;
+            this.LblAjoutCodePostal.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutCodePostal.Location = new System.Drawing.Point(32, 400);
             this.LblAjoutCodePostal.Name = "LblAjoutCodePostal";
             this.LblAjoutCodePostal.Size = new System.Drawing.Size(64, 13);
@@ -483,6 +497,7 @@
             // LblAjoutSkill10
             // 
             this.LblAjoutSkill10.AutoSize = true;
+            this.LblAjoutSkill10.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutSkill10.Location = new System.Drawing.Point(983, 462);
             this.LblAjoutSkill10.Name = "LblAjoutSkill10";
             this.LblAjoutSkill10.Size = new System.Drawing.Size(82, 13);
@@ -492,6 +507,7 @@
             // LblAjoutSkill9
             // 
             this.LblAjoutSkill9.AutoSize = true;
+            this.LblAjoutSkill9.ForeColor = System.Drawing.Color.Black;
             this.LblAjoutSkill9.Location = new System.Drawing.Point(813, 462);
             this.LblAjoutSkill9.Name = "LblAjoutSkill9";
             this.LblAjoutSkill9.Size = new System.Drawing.Size(76, 13);
@@ -530,6 +546,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1178, 688);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtAjoutBirthDate);
@@ -584,6 +601,7 @@
             this.Controls.Add(this.TxtAjoutPrenom);
             this.Controls.Add(this.TxtAjoutNom);
             this.Controls.Add(this.LblAjoutPrenom);
+            this.ForeColor = System.Drawing.Color.Red;
             this.Name = "AjoutCandidat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AjoutCandidat";

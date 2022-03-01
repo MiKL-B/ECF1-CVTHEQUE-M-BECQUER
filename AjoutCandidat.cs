@@ -12,19 +12,26 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class AjoutCandidat : Form
     {
+        public string AjoutLastName;
+      
         public AjoutCandidat()
         {
+            
             InitializeComponent();
         }
 
         private void BtnValiderAjoutCandidat_Click(object sender, EventArgs e)
         {
-            TxtAjoutSkill4.Text = TxtAjoutNom.Text + " " + TxtAjoutPrenom.Text;
+
+            TxtAjoutNom.Text = AjoutLastName;
+         
         }
 
         private void AjoutCandidat_Load(object sender, EventArgs e)
         {
-
+           
         }
+
+     
     }
 }

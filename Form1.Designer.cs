@@ -37,7 +37,6 @@
             this.BtnAjoutCandidat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +65,7 @@
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
@@ -169,6 +169,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,

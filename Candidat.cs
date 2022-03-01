@@ -40,6 +40,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         public Candidat(string rowData)
         {
+
+
            // séparer les datas qui sont séparées par des point virgule
             string[] data = rowData.Split(';');
             for (int i = 0; i < data.Length; i++)
@@ -50,7 +52,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 }
 
             }
-
 
             //séparation du jour, du mois et de l'année de la date de naissance
             string[] birth = data[4].Split('/');
