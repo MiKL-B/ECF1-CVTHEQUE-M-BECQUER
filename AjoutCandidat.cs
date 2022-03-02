@@ -14,14 +14,15 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public partial class AjoutCandidat : Form
     {
-
-        Form1 form;
+        private Candidat candidat;
+        private Form1 form;
     
-        public AjoutCandidat(Form1 fm)
+        public AjoutCandidat(Form1 fm,Candidat data)
         {
             
             InitializeComponent();
-            this.form = fm;
+            candidat = data;
+            form = fm;
           
         }
 
@@ -115,7 +116,12 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         private void AjoutCandidat_Load(object sender, EventArgs e)
         {
-           
+            if (candidat != null)
+            {
+                TxtAjoutNom.Text = candidat.LastName;
+                TxtAjoutPrenom.Text = candidat.FirstName;
+            }
+         
         }
 
     }

@@ -22,6 +22,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Profil { get; set; }
+ 
         public string Skill1 { get; set; }
         public string Skill2 { get; set; }
         public string Skill3 { get; set; }

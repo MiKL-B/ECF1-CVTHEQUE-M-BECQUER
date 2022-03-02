@@ -57,7 +57,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnExport = new System.Windows.Forms.Button();
             this.BtnModifCandidat = new System.Windows.Forms.Button();
@@ -65,6 +64,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.LblSearch = new System.Windows.Forms.Label();
+            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,9 +95,6 @@
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -105,7 +105,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.LblSearch);
             this.panel1.Controls.Add(this.TxtSearch);
             this.panel1.Controls.Add(this.BtnExport);
             this.panel1.Controls.Add(this.BtnModifCandidat);
@@ -118,17 +118,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(535, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "Rechercher :";
-            // 
             // TxtSearch
             // 
             this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -136,6 +125,7 @@
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(144, 20);
             this.TxtSearch.TabIndex = 61;
+            this.TxtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // BtnExport
             // 
@@ -232,6 +222,24 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // LblSearch
+            // 
+            this.LblSearch.AutoSize = true;
+            this.LblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSearch.Location = new System.Drawing.Point(544, 18);
+            this.LblSearch.Name = "LblSearch";
+            this.LblSearch.Size = new System.Drawing.Size(100, 20);
+            this.LblSearch.TabIndex = 62;
+            this.LblSearch.Text = "Rechercher :";
+            // 
+            // candidatBindingSource
+            // 
+            this.candidatBindingSource.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
+            // 
+            // candidatBindingSource1
+            // 
+            this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
             // 
             // Id
             // 
@@ -422,14 +430,6 @@
             this.FacebookProfil.HeaderText = "Facebook";
             this.FacebookProfil.Name = "FacebookProfil";
             // 
-            // candidatBindingSource
-            // 
-            this.candidatBindingSource.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
-            // 
-            // candidatBindingSource1
-            // 
-            this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,10 +461,10 @@
         private System.Windows.Forms.Button BtnModifCandidat;
         private System.Windows.Forms.Button BtnExport;
         private System.Windows.Forms.TextBox TxtSearch;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource candidatBindingSource;
         private System.Windows.Forms.BindingSource candidatBindingSource1;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;

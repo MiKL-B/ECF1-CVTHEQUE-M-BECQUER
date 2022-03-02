@@ -80,7 +80,6 @@
             this.LblAjoutSkill10 = new System.Windows.Forms.Label();
             this.LblAjoutSkill9 = new System.Windows.Forms.Label();
             this.LblHelp = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.TxtAjoutAge = new System.Windows.Forms.TextBox();
             this.LblAjoutAge = new System.Windows.Forms.Label();
             this.TxtAjoutBirthDate = new System.Windows.Forms.TextBox();
@@ -532,17 +531,6 @@
             this.LblHelp.TabIndex = 55;
             this.LblHelp.Text = "Les champs en rouge sont obligatoire";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(413, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 29);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Formulaire d\'ajout de candidat";
-            // 
             // TxtAjoutAge
             // 
             this.TxtAjoutAge.Location = new System.Drawing.Point(178, 154);
@@ -657,13 +645,12 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.LblHelp);
             this.Controls.Add(this.BtnValiderAjoutCandidat);
             this.ForeColor = System.Drawing.Color.Red;
             this.Name = "AjoutCandidat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AjoutCandidat";
+            this.Text = "Formulaire";
             this.Load += new System.EventHandler(this.AjoutCandidat_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -730,7 +717,6 @@
         private System.Windows.Forms.Label LblAjoutSkill10;
         private System.Windows.Forms.Label LblAjoutSkill9;
         private System.Windows.Forms.Label LblHelp;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtAjoutAge;
         private System.Windows.Forms.Label LblAjoutAge;
         private System.Windows.Forms.GroupBox groupBox1;
