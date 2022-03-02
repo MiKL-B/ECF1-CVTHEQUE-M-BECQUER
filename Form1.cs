@@ -21,32 +21,28 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
         
            
-            InitializeComponent();
+                InitializeComponent();
+                BtnModifCandidat.Enabled = false;
+            //lit le contenu du fichier CSV ligne par ligne
+            string[] csvLines = File.ReadAllLines(@"./data/hrdata.csv");
 
 
-            string filename = "";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.InitialDirectory = @"./data/";
-            ofd.Filter = "CSV|*.CSV";
-            //ofd.FileName = "hrdata.csv";
-    
-            if(ofd.ShowDialog() == DialogResult.OK)
-            {
-               
-              filename = ofd.FileName;
+            ////List des candidats
 
-            }
-            if (File.Exists(filename))
-            {
-                string[] csvLines = File.ReadAllLines(filename);
-                var candidats = new List<Candidat>();
-                for (int i = 1; i < csvLines.Length; i++)
+            var candidats = new List<Candidat>();
+
+            //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
+            //instanciations des candidats
+
+
+            for (int i = 1; i < csvLines.Length; i++)
                 {
                     Candidat candidat = new Candidat(csvLines[i]);
                     candidats.Add(candidat);
                 }
 
-                for (int i = 0; i < candidats.Count; i++)
+            //remplissage du tableau
+            for (int i = 0; i < candidats.Count; i++)
                 {
                     this.dataGridView1.Rows.Add(
                         candidats[i].Id,
@@ -78,20 +74,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                         candidats[i].FacebookProfil
                         );
                 }
-            }
-            //lit le contenu du fichier CSV ligne par ligne
-       
-            BtnModifCandidat.Enabled = false;
+            
 
-            ////List des candidats
-   
-         
-
-            //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
-            //instanciations des candidats
-
-
-            //remplissage du tableau
            
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -203,15 +187,11 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     //servira pour la modification du candidat
                     // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
                     //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
-                }
-               
-                
+                }                
             }
             catch
             {
-               
-                 MessageBox.Show("Le CV du candidat est manquant !");
-               
+                MessageBox.Show("Le CV du candidat est manquant !");
             }
           
 
