@@ -108,6 +108,14 @@ namespace ECF1_CVTHEQUE_M_BECQUER
               
                 //MessageBox.Show("c'est pété");
                 MessageBox.Show("update");
+                try
+                {
+                    Save_data();
+                }
+                catch
+                {
+                    MessageBox.Show("[ERREUR]: fichier non exporté");
+                }
                 Close();
             }
         }
