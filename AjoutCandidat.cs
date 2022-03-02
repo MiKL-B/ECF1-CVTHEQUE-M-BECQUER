@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -58,6 +59,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 TxtAjoutFacebook.Text
 
                 );
+
             try
             {
 
@@ -66,7 +68,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 //ajout des colonnes
                 foreach (DataGridViewColumn column in form.dataGridView1.Columns)
                 {
-                    csv += column.HeaderText + ',';
+                    csv += column.HeaderText + ';';
                 }
 
                 //ajout retour a la ligne.
@@ -80,8 +82,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                         if (cell.Value != null)
                         {
                             //ajout des datas
-                            csv += cell.Value.ToString().TrimEnd(',').Replace(",", ";") + ',';
+                            csv += cell.Value.ToString().TrimEnd(';').Replace(";", ",") + ';';
                         }
+                     
 
                     }
 
@@ -89,7 +92,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 }
 
                 //export
-                string folderPath = @"./data/";
+                string folderPath = @".\data\";
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
@@ -98,12 +101,16 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 string fileExport = "hrdata.csv";
 
                 File.WriteAllText(folderPath + fileExport, csv);
-                MessageBox.Show("fichier save");
+                MessageBox.Show("Candidat ajouté avec succés");
+                Close();
             }
             catch
             {
-                MessageBox.Show("[ERREUR]: fichier non save");
+                MessageBox.Show("[ERREUR]: fichier non exporté");
             }
+
+
+
         }
 
         private void AjoutCandidat_Load(object sender, EventArgs e)
@@ -111,6 +118,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
            
         }
 
-     
     }
-}
+    }
+

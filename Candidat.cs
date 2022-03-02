@@ -9,8 +9,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 {
     public class Candidat
     {
-        public int Id { get; set; }
-        public string LastName { get; set; }
+        public string Id { get; set; }
+        public string LastName { get; set; } = string.Empty;
         public string FirstName { get; set; }
         public int Age { get; set; }
         public string BirthDate { get; set; }
@@ -44,36 +44,39 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         
            // séparer les datas qui sont séparées par des point virgule
             string[] data = rowData.Split(';');
+            Console.WriteLine(data[0]);
+
             for (int i = 0; i < data.Length; i++)
             {
                 if (data[i] == "NULL")
                 {
-                    data[i] = null;
+                    data[i] = "  ";
                 }
 
             }
+            try{
+                //séparation du jour, du mois et de l'année de la date de naissance
+                string[] birth = data[4].Split('/');
+                ////concaténation du jour, du mois et de l'année de la date de naissance
+                DateTime birthDay = new DateTime(Convert.ToInt32(birth[2]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[0]));
 
-            ////séparation du jour, du mois et de l'année de la date de naissance
-            string[] birth = data[4].Split('/');
-            ////concaténation du jour, du mois et de l'année de la date de naissance
-            DateTime birthDay = new DateTime(Convert.ToInt32(birth[2]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[0]));
-                
-            //string.Join("/", Convert.ToInt32(birth[0]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[2]));
-            //Console.WriteLine(birthDay);
+                //string.Join("/", Convert.ToInt32(birth[0]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[2]));
+                //Console.WriteLine(birthDay);
 
-            DateTime today = DateTime.Today;
+                DateTime today = DateTime.Today;
+                int age = today.Year - birthDay.Year;
+                this.Age = age;
+            }
+            catch
+            {
 
-
-
-            int age = today.Year - birthDay.Year;
-  
-      
+            }
+         
             // parse data en propriété
-            this.Id = Convert.ToInt32(data[0]);
+            this.Id = data[0];
             this.LastName = data[1];
             this.FirstName = data[2];
-            this.Age = age;
-            this.BirthDate =data[4];
+            this.BirthDate = data[4];
             this.Address = data[5];
             this.Address1 = data[6];
             this.CodePostal = data[7];

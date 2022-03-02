@@ -81,9 +81,9 @@
             this.LblAjoutSkill9 = new System.Windows.Forms.Label();
             this.LblHelp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtAjoutBirthDate = new System.Windows.Forms.TextBox();
             this.TxtAjoutAge = new System.Windows.Forms.TextBox();
             this.LblAjoutAge = new System.Windows.Forms.Label();
+            this.TxtAjoutBirthDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LblAjoutPrenom
@@ -537,19 +537,13 @@
             this.label1.TabIndex = 57;
             this.label1.Text = "Formulaire d\'ajout de candidat";
             // 
-            // TxtAjoutBirthDate
-            // 
-            this.TxtAjoutBirthDate.Location = new System.Drawing.Point(35, 212);
-            this.TxtAjoutBirthDate.Name = "TxtAjoutBirthDate";
-            this.TxtAjoutBirthDate.Size = new System.Drawing.Size(144, 20);
-            this.TxtAjoutBirthDate.TabIndex = 58;
-            // 
             // TxtAjoutAge
             // 
             this.TxtAjoutAge.Location = new System.Drawing.Point(203, 212);
             this.TxtAjoutAge.Name = "TxtAjoutAge";
             this.TxtAjoutAge.Size = new System.Drawing.Size(144, 20);
             this.TxtAjoutAge.TabIndex = 59;
+            this.TxtAjoutAge.Visible = false;
             // 
             // LblAjoutAge
             // 
@@ -560,6 +554,14 @@
             this.LblAjoutAge.Size = new System.Drawing.Size(26, 13);
             this.LblAjoutAge.TabIndex = 60;
             this.LblAjoutAge.Text = "Age";
+            this.LblAjoutAge.Visible = false;
+            // 
+            // TxtAjoutBirthDate
+            // 
+            this.TxtAjoutBirthDate.Location = new System.Drawing.Point(35, 212);
+            this.TxtAjoutBirthDate.Name = "TxtAjoutBirthDate";
+            this.TxtAjoutBirthDate.Size = new System.Drawing.Size(144, 20);
+            this.TxtAjoutBirthDate.TabIndex = 61;
             // 
             // AjoutCandidat
             // 
@@ -567,9 +569,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1178, 688);
+            this.Controls.Add(this.TxtAjoutBirthDate);
             this.Controls.Add(this.LblAjoutAge);
             this.Controls.Add(this.TxtAjoutAge);
-            this.Controls.Add(this.TxtAjoutBirthDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LblHelp);
             this.Controls.Add(this.LblAjoutSkill9);
@@ -686,8 +688,8 @@
         private System.Windows.Forms.Label LblAjoutSkill9;
         private System.Windows.Forms.Label LblHelp;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtAjoutBirthDate;
         private System.Windows.Forms.TextBox TxtAjoutAge;
         private System.Windows.Forms.Label LblAjoutAge;
+        private System.Windows.Forms.TextBox TxtAjoutBirthDate;
     }
 }

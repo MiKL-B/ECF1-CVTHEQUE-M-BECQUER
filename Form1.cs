@@ -22,57 +22,77 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         
            
             InitializeComponent();
-      
+
+
+            string filename = "";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = @"./data/";
+            ofd.Filter = "CSV|*.CSV";
+            //ofd.FileName = "hrdata.csv";
+    
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+               
+              filename = ofd.FileName;
+
+            }
+            if (File.Exists(filename))
+            {
+                string[] csvLines = File.ReadAllLines(filename);
+                var candidats = new List<Candidat>();
+                for (int i = 1; i < csvLines.Length; i++)
+                {
+                    Candidat candidat = new Candidat(csvLines[i]);
+                    candidats.Add(candidat);
+                }
+
+                for (int i = 0; i < candidats.Count; i++)
+                {
+                    this.dataGridView1.Rows.Add(
+                        candidats[i].Id,
+                        candidats[i].LastName,
+                        candidats[i].FirstName,
+                        candidats[i].Age,
+                        candidats[i].BirthDate,
+                        candidats[i].Address,
+                        candidats[i].Address1,
+                        candidats[i].CodePostal,
+                        candidats[i].Ville,
+                        candidats[i].SmartPhone,
+                        candidats[i].Phone,
+                        candidats[i].Email,
+                        candidats[i].Profil,
+                        candidats[i].Skill1,
+                        candidats[i].Skill2,
+                        candidats[i].Skill3,
+                        candidats[i].Skill4,
+                        candidats[i].Skill5,
+                        candidats[i].Skill6,
+                        candidats[i].Skill7,
+                        candidats[i].Skill8,
+                        candidats[i].Skill9,
+                        candidats[i].Skill10,
+                        candidats[i].WebSite,
+                        candidats[i].LinkedinProfil,
+                        candidats[i].ViadeoProfil,
+                        candidats[i].FacebookProfil
+                        );
+                }
+            }
             //lit le contenu du fichier CSV ligne par ligne
-            string[] csvLines = File.ReadAllLines(@"./data/hrdata.csv");
+       
             BtnModifCandidat.Enabled = false;
 
             ////List des candidats
-            var candidats = new List<Candidat>();
+   
          
 
             //commencer a 1 pour ne pas parser la premiere ligne qui correspond au header de nos datas
             //instanciations des candidats
 
-            for (int i = 1; i < csvLines.Length; i++)
-            {
-                Candidat candidat = new Candidat(csvLines[i]);
-                candidats.Add(candidat);
-            }
 
             //remplissage du tableau
-            for (int i = 0; i < candidats.Count; i++)
-            {
-                this.dataGridView1.Rows.Add(
-                    candidats[i].Id,
-                    candidats[i].LastName,
-                    candidats[i].FirstName,
-                    candidats[i].Age,
-                    candidats[i].BirthDate,
-                    candidats[i].Address,
-                    candidats[i].Address1,
-                    candidats[i].CodePostal,
-                    candidats[i].Ville,
-                    candidats[i].SmartPhone,
-                    candidats[i].Phone,
-                    candidats[i].Email,
-                    candidats[i].Profil,
-                    candidats[i].Skill1,
-                    candidats[i].Skill2,
-                    candidats[i].Skill3,
-                    candidats[i].Skill4,
-                    candidats[i].Skill5,
-                    candidats[i].Skill6,
-                    candidats[i].Skill7,
-                    candidats[i].Skill8,
-                    candidats[i].Skill9,
-                    candidats[i].Skill10,
-                    candidats[i].WebSite,
-                    candidats[i].LinkedinProfil,
-                    candidats[i].ViadeoProfil,
-                    candidats[i].FacebookProfil
-                    );
-            }
+           
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -116,7 +136,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 //ajout des colonnes
                 foreach (DataGridViewColumn column in dataGridView1.Columns)
                 {
-                    csv += column.HeaderText + ',';
+                    csv += column.HeaderText + ';';
                 }
 
                 //ajout retour a la ligne.
@@ -130,7 +150,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                         if (cell.Value != null)
                         {
                             //ajout des datas
-                            csv += cell.Value.ToString().TrimEnd(',').Replace(",", ";") + ',';
+                            csv += cell.Value.ToString().TrimEnd(';').Replace(";", ",") + ';';
                         }
                     
                     }
@@ -151,7 +171,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
                 //Console.WriteLine(folderPath + fileExport);
                 Process.Start(folderPath + fileExport);
-                MessageBox.Show("fichier exporté");
+                MessageBox.Show("fichier exporté dans: C:\\CSV");
             }
             catch
             {
@@ -184,10 +204,14 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
                     //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
                 }
+               
+                
             }
-            catch(Exception ex)
+            catch
             {
-                Console.WriteLine(ex.Message);
+               
+                 MessageBox.Show("Le CV du candidat est manquant !");
+               
             }
           
 
@@ -212,5 +236,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             }
 
         }
+
+      
     }
 }
