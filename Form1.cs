@@ -21,11 +21,12 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         public Form1()
         {
 
-      
 
             InitializeComponent();
-                BtnModifCandidat.Enabled = false;
-      
+
+       
+            BtnModifCandidat.Enabled = false;
+    
             //lit le contenu du fichier CSV ligne par ligne
             string[] csvLines = File.ReadAllLines(@"./data/hrdata.csv");
 
@@ -106,8 +107,10 @@ namespace ECF1_CVTHEQUE_M_BECQUER
       
         private void BtnModifCandidat_Click(object sender, EventArgs e)
         {
+            dataGridView1.Refresh();
             //Instanciation du formulaire modification candidat
-            AjoutCandidat ajoutCandidat = new AjoutCandidat(this,candidats[int.Parse(_Id)]);
+            var candidat = candidats.Find(c => c.Id == _Id);
+            AjoutCandidat ajoutCandidat = new AjoutCandidat(this, candidat);
 
             //Affichage du formulaire au click
             //modificationCandidat.LastNameModif = dataGridView1.Rows[0].Cells[0].Value.ToString();
@@ -120,11 +123,16 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //exporter en csv
         private void BtnExport_Click(object sender, EventArgs e)
         {
+            Export_data();
+          
+        }
+        public void Export_data()
+        {
             try
             {
-               
+
                 string csv = string.Empty;
-             
+
                 //ajout des colonnes
                 foreach (DataGridViewColumn column in dataGridView1.Columns)
                 {
@@ -144,7 +152,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                             //ajout des datas
                             csv += cell.Value.ToString().TrimEnd(';').Replace(";", ",") + ';';
                         }
-                    
+
                     }
 
                     csv += "\r\n";
@@ -213,7 +221,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     dataGridView1.CurrentRow.Selected = true;
                     _Id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                    Console.WriteLine("[CLICK] ID:" + _Id + "\n pour modification candidat");
+                    //Console.WriteLine("[CLICK] ID:" + _Id + "\n pour modification candidat");
                     BtnModifCandidat.Enabled = true;
          
                 }

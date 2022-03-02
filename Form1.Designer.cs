@@ -66,8 +66,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.LblSearch = new System.Windows.Forms.Label();
-            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +93,8 @@
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -187,6 +187,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -218,6 +219,7 @@
             this.FacebookProfil});
             this.dataGridView1.Location = new System.Drawing.Point(9, 6);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1335, 683);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -233,20 +235,13 @@
             this.LblSearch.TabIndex = 62;
             this.LblSearch.Text = "Rechercher :";
             // 
-            // candidatBindingSource
-            // 
-            this.candidatBindingSource.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
-            // 
-            // candidatBindingSource1
-            // 
-            this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
-            // 
             // Id
             // 
             dataGridViewCellStyle1.NullValue = "NULL";
             this.Id.DefaultCellStyle = dataGridViewCellStyle1;
             this.Id.HeaderText = "id";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // LastName
             // 
@@ -254,6 +249,7 @@
             this.LastName.DefaultCellStyle = dataGridViewCellStyle2;
             this.LastName.HeaderText = "Nom";
             this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
             // FirstName
             // 
@@ -261,6 +257,7 @@
             this.FirstName.DefaultCellStyle = dataGridViewCellStyle3;
             this.FirstName.HeaderText = "Prénom";
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // Age
             // 
@@ -268,6 +265,7 @@
             this.Age.DefaultCellStyle = dataGridViewCellStyle4;
             this.Age.HeaderText = "Age";
             this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
             // 
             // BirthDate
             // 
@@ -275,6 +273,7 @@
             this.BirthDate.DefaultCellStyle = dataGridViewCellStyle5;
             this.BirthDate.HeaderText = "Date de naissance";
             this.BirthDate.Name = "BirthDate";
+            this.BirthDate.ReadOnly = true;
             // 
             // Address
             // 
@@ -282,6 +281,7 @@
             this.Address.DefaultCellStyle = dataGridViewCellStyle6;
             this.Address.HeaderText = "Adresse";
             this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
             // Address1
             // 
@@ -289,6 +289,7 @@
             this.Address1.DefaultCellStyle = dataGridViewCellStyle7;
             this.Address1.HeaderText = "Adresse 1";
             this.Address1.Name = "Address1";
+            this.Address1.ReadOnly = true;
             // 
             // CodePostal
             // 
@@ -296,6 +297,7 @@
             this.CodePostal.DefaultCellStyle = dataGridViewCellStyle8;
             this.CodePostal.HeaderText = "Code postal";
             this.CodePostal.Name = "CodePostal";
+            this.CodePostal.ReadOnly = true;
             // 
             // Ville
             // 
@@ -303,6 +305,7 @@
             this.Ville.DefaultCellStyle = dataGridViewCellStyle9;
             this.Ville.HeaderText = "Ville";
             this.Ville.Name = "Ville";
+            this.Ville.ReadOnly = true;
             // 
             // SmartPhone
             // 
@@ -310,6 +313,7 @@
             this.SmartPhone.DefaultCellStyle = dataGridViewCellStyle10;
             this.SmartPhone.HeaderText = "Portable";
             this.SmartPhone.Name = "SmartPhone";
+            this.SmartPhone.ReadOnly = true;
             // 
             // Phone
             // 
@@ -317,6 +321,7 @@
             this.Phone.DefaultCellStyle = dataGridViewCellStyle11;
             this.Phone.HeaderText = "Fixe";
             this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
             // 
             // Email
             // 
@@ -324,6 +329,7 @@
             this.Email.DefaultCellStyle = dataGridViewCellStyle12;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Profil
             // 
@@ -331,6 +337,7 @@
             this.Profil.DefaultCellStyle = dataGridViewCellStyle13;
             this.Profil.HeaderText = "Profil";
             this.Profil.Name = "Profil";
+            this.Profil.ReadOnly = true;
             // 
             // Skill1
             // 
@@ -338,6 +345,7 @@
             this.Skill1.DefaultCellStyle = dataGridViewCellStyle14;
             this.Skill1.HeaderText = "Comp1";
             this.Skill1.Name = "Skill1";
+            this.Skill1.ReadOnly = true;
             // 
             // Skill2
             // 
@@ -345,6 +353,7 @@
             this.Skill2.DefaultCellStyle = dataGridViewCellStyle15;
             this.Skill2.HeaderText = "Comp2";
             this.Skill2.Name = "Skill2";
+            this.Skill2.ReadOnly = true;
             // 
             // Skill3
             // 
@@ -352,6 +361,7 @@
             this.Skill3.DefaultCellStyle = dataGridViewCellStyle16;
             this.Skill3.HeaderText = "Comp3";
             this.Skill3.Name = "Skill3";
+            this.Skill3.ReadOnly = true;
             // 
             // Skill4
             // 
@@ -359,6 +369,7 @@
             this.Skill4.DefaultCellStyle = dataGridViewCellStyle17;
             this.Skill4.HeaderText = "Comp4";
             this.Skill4.Name = "Skill4";
+            this.Skill4.ReadOnly = true;
             // 
             // Skill5
             // 
@@ -366,6 +377,7 @@
             this.Skill5.DefaultCellStyle = dataGridViewCellStyle18;
             this.Skill5.HeaderText = "Comp5";
             this.Skill5.Name = "Skill5";
+            this.Skill5.ReadOnly = true;
             // 
             // Skill6
             // 
@@ -373,6 +385,7 @@
             this.Skill6.DefaultCellStyle = dataGridViewCellStyle19;
             this.Skill6.HeaderText = "Comp6";
             this.Skill6.Name = "Skill6";
+            this.Skill6.ReadOnly = true;
             // 
             // Skill7
             // 
@@ -380,6 +393,7 @@
             this.Skill7.DefaultCellStyle = dataGridViewCellStyle20;
             this.Skill7.HeaderText = "Comp7";
             this.Skill7.Name = "Skill7";
+            this.Skill7.ReadOnly = true;
             // 
             // Skill8
             // 
@@ -387,6 +401,7 @@
             this.Skill8.DefaultCellStyle = dataGridViewCellStyle21;
             this.Skill8.HeaderText = "Comp8";
             this.Skill8.Name = "Skill8";
+            this.Skill8.ReadOnly = true;
             // 
             // Skill9
             // 
@@ -394,6 +409,7 @@
             this.Skill9.DefaultCellStyle = dataGridViewCellStyle22;
             this.Skill9.HeaderText = "Comp9";
             this.Skill9.Name = "Skill9";
+            this.Skill9.ReadOnly = true;
             // 
             // Skill10
             // 
@@ -401,6 +417,7 @@
             this.Skill10.DefaultCellStyle = dataGridViewCellStyle23;
             this.Skill10.HeaderText = "Comp10";
             this.Skill10.Name = "Skill10";
+            this.Skill10.ReadOnly = true;
             // 
             // WebSite
             // 
@@ -408,6 +425,7 @@
             this.WebSite.DefaultCellStyle = dataGridViewCellStyle24;
             this.WebSite.HeaderText = "Site web";
             this.WebSite.Name = "WebSite";
+            this.WebSite.ReadOnly = true;
             // 
             // LinkedinProfil
             // 
@@ -415,6 +433,7 @@
             this.LinkedinProfil.DefaultCellStyle = dataGridViewCellStyle25;
             this.LinkedinProfil.HeaderText = "Linkedin";
             this.LinkedinProfil.Name = "LinkedinProfil";
+            this.LinkedinProfil.ReadOnly = true;
             // 
             // ViadeoProfil
             // 
@@ -422,6 +441,7 @@
             this.ViadeoProfil.DefaultCellStyle = dataGridViewCellStyle26;
             this.ViadeoProfil.HeaderText = "Viadeo";
             this.ViadeoProfil.Name = "ViadeoProfil";
+            this.ViadeoProfil.ReadOnly = true;
             // 
             // FacebookProfil
             // 
@@ -429,6 +449,15 @@
             this.FacebookProfil.DefaultCellStyle = dataGridViewCellStyle27;
             this.FacebookProfil.HeaderText = "Facebook";
             this.FacebookProfil.Name = "FacebookProfil";
+            this.FacebookProfil.ReadOnly = true;
+            // 
+            // candidatBindingSource
+            // 
+            this.candidatBindingSource.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
+            // 
+            // candidatBindingSource1
+            // 
+            this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
             // 
             // Form1
             // 

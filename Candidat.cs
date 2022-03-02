@@ -45,7 +45,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         
            // séparer les datas qui sont séparées par des point virgule
             string[] data = rowData.Split(';');
-            Console.WriteLine(data[0]);
+          
 
             for (int i = 0; i < data.Length; i++)
             {

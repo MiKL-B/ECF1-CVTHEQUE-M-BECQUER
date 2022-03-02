@@ -82,10 +82,10 @@
             this.LblHelp = new System.Windows.Forms.Label();
             this.TxtAjoutAge = new System.Windows.Forms.TextBox();
             this.LblAjoutAge = new System.Windows.Forms.Label();
-            this.TxtAjoutBirthDate = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.TxtAjoutBirthDate = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -550,15 +550,9 @@
             this.LblAjoutAge.Text = "Age";
             this.LblAjoutAge.Visible = false;
             // 
-            // TxtAjoutBirthDate
-            // 
-            this.TxtAjoutBirthDate.Location = new System.Drawing.Point(178, 116);
-            this.TxtAjoutBirthDate.Name = "TxtAjoutBirthDate";
-            this.TxtAjoutBirthDate.Size = new System.Drawing.Size(144, 20);
-            this.TxtAjoutBirthDate.TabIndex = 61;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TxtAjoutBirthDate);
             this.groupBox1.Controls.Add(this.LblAjoutVille);
             this.groupBox1.Controls.Add(this.TxtAjoutCodePostal);
             this.groupBox1.Controls.Add(this.TxtAjoutVille);
@@ -570,7 +564,6 @@
             this.groupBox1.Controls.Add(this.LblAjoutAddress);
             this.groupBox1.Controls.Add(this.TxtAjoutAge);
             this.groupBox1.Controls.Add(this.LblAjoutAge);
-            this.groupBox1.Controls.Add(this.TxtAjoutBirthDate);
             this.groupBox1.Controls.Add(this.LblAjoutNom);
             this.groupBox1.Controls.Add(this.LblAjoutPrenom);
             this.groupBox1.Controls.Add(this.TxtAjoutPrenom);
@@ -636,6 +629,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // TxtAjoutBirthDate
+            // 
+            this.TxtAjoutBirthDate.Location = new System.Drawing.Point(178, 109);
+            this.TxtAjoutBirthDate.Name = "TxtAjoutBirthDate";
+            this.TxtAjoutBirthDate.Size = new System.Drawing.Size(144, 20);
+            this.TxtAjoutBirthDate.TabIndex = 61;
+            // 
             // AjoutCandidat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,7 +668,6 @@
         private System.Windows.Forms.Label LblAjoutPrenom;
         private System.Windows.Forms.TextBox TxtAjoutNom;
         private System.Windows.Forms.TextBox TxtAjoutPrenom;
-        private System.Windows.Forms.TextBox TxtAjoutBirthDate;
         private System.Windows.Forms.Label LblAjoutNom;
         private System.Windows.Forms.Label LblAjoutBirthDate;
         private System.Windows.Forms.TextBox TxtAjoutSkill4;
@@ -722,5 +721,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox TxtAjoutBirthDate;
     }
 }
