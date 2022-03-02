@@ -28,7 +28,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         private void BtnValiderAjoutCandidat_Click(object sender, EventArgs e)
         {
-
+            //si il n'y a pas de candidats, les champs se remplissent suivant la saisie de l'utilisateur
             if (candidat == null)
             {
                 form.dataGridView1.Rows.Add(
@@ -74,6 +74,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             }
             else
             {
+                //permet de mettre a jour l'affichage pour un candidat a modifier
                 int i;
                 i = form.dataGridView1.SelectedCells[0].RowIndex;
                 DataGridViewRow row = form.dataGridView1.Rows[i];
@@ -86,7 +87,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 row.Cells[7].Value = TxtAjoutCodePostal.Text;
                 row.Cells[8].Value = TxtAjoutVille.Text;
                 row.Cells[9].Value = TxtAjoutSmartPhone.Text;
-                //
                 row.Cells[10].Value = TxtAjoutPhone.Text;
                 row.Cells[11].Value = TxtAjoutEmail.Text;
                 row.Cells[12].Value = TxtAjoutProfil.Text;
@@ -95,7 +95,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 row.Cells[15].Value = TxtAjoutSkill3.Text;
                 row.Cells[16].Value = TxtAjoutSkill4.Text;
                 row.Cells[17].Value = TxtAjoutSkill5.Text;
-                //
                 row.Cells[18].Value = TxtAjoutSkill6.Text;
                 row.Cells[19].Value = TxtAjoutSkill7.Text;
                 row.Cells[20].Value = TxtAjoutSkill8.Text;
@@ -106,7 +105,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 row.Cells[25].Value = TxtAjoutViadeo.Text;
                 row.Cells[26].Value = TxtAjoutFacebook.Text;
               
-                //MessageBox.Show("c'est pété");
+       
                 MessageBox.Show("update");
                 try
                 {
@@ -119,6 +118,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 Close();
             }
         }
+
+        //recupere tout le csv modifié et le sauvegarde
         private void Save_data()
         {
             string csv = string.Empty;
@@ -162,6 +163,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             MessageBox.Show("Candidat ajouté avec succés");
             Close();
         }
+        //lors du clic sur la modification pour un candidat, affichera les champs remplis avec les données du candidats
         private void AjoutCandidat_Load(object sender, EventArgs e)
         {
          

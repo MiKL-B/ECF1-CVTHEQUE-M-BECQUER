@@ -46,7 +46,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
            // séparer les datas qui sont séparées par des point virgule
             string[] data = rowData.Split(';');
           
-
+            //si un champs vaut NULL on affichera un vide
             for (int i = 0; i < data.Length; i++)
             {
                 if (data[i] == "NULL")
@@ -60,9 +60,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 string[] birth = data[4].Split('/');
                 ////concaténation du jour, du mois et de l'année de la date de naissance
                 DateTime birthDay = new DateTime(Convert.ToInt32(birth[2]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[0]));
-
-                //string.Join("/", Convert.ToInt32(birth[0]), Convert.ToInt32(birth[1]), Convert.ToInt32(birth[2]));
-                //Console.WriteLine(birthDay);
 
                 DateTime today = DateTime.Today;
                 int age = today.Year - birthDay.Year;

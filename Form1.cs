@@ -24,7 +24,8 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
             InitializeComponent();
 
-       
+            //désactivation du bouton modification
+            //il sera activé lors du clic sur le candidat
             BtnModifCandidat.Enabled = false;
     
             //lit le contenu du fichier CSV ligne par ligne
@@ -95,32 +96,23 @@ namespace ECF1_CVTHEQUE_M_BECQUER
          
 
         }
+        //affiche le formulaire d'ajout de candidat
         private void BtnAjoutCandidat_Click(object sender, EventArgs e)
         {
-
             //Instanciation du formulaire ajout candidat
             AjoutCandidat ajoutCandidat = new AjoutCandidat(this,null);
-            //Affichage du formulaire au click
             ajoutCandidat.ShowDialog();
-           
         }
-      
+        //affiche le formulaire (le meme qu'ajout mais avec les informations du candidat)
         private void BtnModifCandidat_Click(object sender, EventArgs e)
         {
-            dataGridView1.Refresh();
             //Instanciation du formulaire modification candidat
             var candidat = candidats.Find(c => c.Id == _Id);
             AjoutCandidat ajoutCandidat = new AjoutCandidat(this, candidat);
-
-            //Affichage du formulaire au click
-            //modificationCandidat.LastNameModif = dataGridView1.Rows[0].Cells[0].Value.ToString();
             ajoutCandidat.ShowDialog();
-      
-
-          
         }
 
-        //exporter en csv
+        //exporter en csv au click sur le bouton export
         private void BtnExport_Click(object sender, EventArgs e)
         {
             Export_data();
@@ -178,7 +170,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 MessageBox.Show("[ERREUR]: fichier non exporté");
             }
         }
-        //double click sur une personne pour afficher son cv
+        //double click sur une personne pour afficher son cv (.pdf / .docx)
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
      
@@ -200,9 +192,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     {
                         Process.Start(filenameDocx);
                     }
-                    //servira pour la modification du candidat
-                    // TxtSearch.Text = dataGridView1.Rows[e.RowIndex].Cells["FirstName"].FormattedValue.ToString();
-                    //Console.WriteLine("[DOUBLE CLICK] ID:" + id + "\n ouvrir le cv");
+        
                 }                
             }
             catch
@@ -212,7 +202,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
           
 
         }
-
+        //choisit un candidat au clic et le surligne et permet sa modification 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -221,7 +211,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     dataGridView1.CurrentRow.Selected = true;
                     _Id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                    //Console.WriteLine("[CLICK] ID:" + _Id + "\n pour modification candidat");
                     BtnModifCandidat.Enabled = true;
          
                 }
@@ -234,7 +223,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         }
 
        
-        //filtre
+        //filtre via la textbox TxtSearch
         //ville, age, compétence
         //8, 3 ,13-22
         private void TxtSearch_TextChanged(object sender, EventArgs e)
