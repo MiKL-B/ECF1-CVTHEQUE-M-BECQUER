@@ -64,7 +64,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].Phone,
                     candidats[i].Email,
                     candidats[i].Profil,
-                    //candidats[i].Skills,
                     candidats[i].Skill1,
                     candidats[i].Skill2,
                     candidats[i].Skill3,
@@ -116,10 +115,12 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //exporter en csv au click sur le bouton export
         private void BtnExport_Click(object sender, EventArgs e)
         {
-            Export_data();
-          
+            Export_Save_data();
+            Process.Start(@".\data\" + "hrdata.csv");
         }
-        public void Export_data()
+
+
+        public void Export_Save_data()
         {
             try
             {
@@ -152,25 +153,31 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 }
 
                 //export
-                string folderPath = "C:\\CSV\\";
+                string folderPath = @".\data\";
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
 
-                string fileExport = "dataExport.csv";
+                string fileExport = "hrdata.csv";
+
 
                 File.WriteAllText(folderPath + fileExport, csv);
 
                 //Console.WriteLine(folderPath + fileExport);
-                Process.Start(folderPath + fileExport);
-                MessageBox.Show("fichier exporté dans: C:\\CSV");
+          
+
+                MessageBox.Show("fichier exporté ou sauvegardé");
             }
             catch
             {
-                MessageBox.Show("[ERREUR]: fichier non exporté");
+                MessageBox.Show("[ERREUR]: fichier non exporté / non sauvegardé");
             }
         }
+
+
+
+
         //double click sur une personne pour afficher son cv (.pdf / .docx)
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -234,51 +241,38 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //8, 3 ,13-22
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
+        
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-              
-                if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()) ||
-                    (row.Cells[8].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()) ||
-                    (row.Cells[13].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
+             
+                if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
                 {
                     dataGridView1.Rows[row.Index].Visible = true;
+
                 }
                 else
                 {
                     dataGridView1.CurrentCell = null;
                     dataGridView1.Rows[row.Index].Visible = false;
-                  
+
                 }
-                if(dataGridView1.Rows[row.Index].Visible  == true && dataGridView1.Rows.Count == 1)
-                {
-                    //dataGridView1.Update();
-                
-                    Console.WriteLine(dataGridView1.Rows[row.Index].Cells[1].Value);
-                }
-   
-      
-                
+
             }
+
+
         }
+     
         //nom, ville profil
         //1 8 12
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-
-
-
-    
             if(e.ColumnIndex == 1)
             {
                 Console.WriteLine("1");
                dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
                 
             }
-         
-    
-
-
 
         }
 

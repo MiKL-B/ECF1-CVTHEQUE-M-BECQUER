@@ -64,13 +64,13 @@ namespace ECF1_CVTHEQUE_M_BECQUER
              
                 try
                 {
-                    Save_data();
+                    form.Export_Save_data();
                 }
                 catch
                 {
-                    MessageBox.Show("[ERREUR]: fichier non exporté");
+                    
                 }
-
+                Close();
             }
             else
             {
@@ -109,60 +109,17 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 MessageBox.Show("update");
                 try
                 {
-                    Save_data();
+                    form.Export_Save_data();
                 }
                 catch
                 {
-                    MessageBox.Show("[ERREUR]: fichier non exporté");
+              
                 }
                 Close();
             }
         }
 
-        //recupere tout le csv modifié et le sauvegarde
-        private void Save_data()
-        {
-            string csv = string.Empty;
-
-            //ajout des colonnes
-            foreach (DataGridViewColumn column in form.dataGridView1.Columns)
-            {
-                csv += column.HeaderText + ';';
-            }
-
-            //ajout retour a la ligne.
-            csv += "\r\n";
-
-            //ajout de lignes
-            foreach (DataGridViewRow row in form.dataGridView1.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    if (cell.Value != null)
-                    {
-                        //ajout des datas
-                        csv += cell.Value.ToString().TrimEnd(';').Replace(";", ",") + ';';
-                    }
-
-
-                }
-
-                csv += "\r\n";
-            }
-
-            //export
-            string folderPath = @".\data\";
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
-            }
-
-            string fileExport = "hrdata.csv";
-
-            File.WriteAllText(folderPath + fileExport, csv);
-            MessageBox.Show("Candidat ajouté avec succés");
-            Close();
-        }
+ 
         //lors du clic sur la modification pour un candidat, affichera les champs remplis avec les données du candidats
         private void AjoutCandidat_Load(object sender, EventArgs e)
         {
