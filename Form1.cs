@@ -80,9 +80,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].FacebookProfil
                     ) ;
                 }
-            
-
-           
+            //tri par défaut par nom de candidat
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
+     
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -205,6 +205,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //choisit un candidat au clic et le surligne et permet sa modification 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+        
             try
             {
                 if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -212,14 +213,16 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     dataGridView1.CurrentRow.Selected = true;
                     _Id = dataGridView1.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
                     BtnModifCandidat.Enabled = true;
-         
+
                 }
+               
             }
+  
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+              Console.WriteLine(ex.Message);
             }
-
+           
         }
 
        
@@ -245,6 +248,31 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
             }
         }
-       
+        //nom, ville profil
+        //1 8 12
+        private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewColumn col = dataGridView1.Columns[e.ColumnIndex];
+            Console.WriteLine(col);
+          
+         
+            switch (e.ColumnIndex)
+            {
+                case 1:
+                    dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
+                    break;
+                case 8:
+                    dataGridView1.Sort(dataGridView1.Columns[8], ListSortDirection.Ascending);
+
+                    break;
+                case 12:
+                    dataGridView1.Sort(dataGridView1.Columns[12], ListSortDirection.Ascending);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
     }
 }
