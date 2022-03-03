@@ -220,7 +220,9 @@ namespace ECF1_CVTHEQUE_M_BECQUER
   
             catch(Exception ex)
             {
-              Console.WriteLine(ex.Message);
+
+
+                Console.WriteLine(ex.Message);
             }
            
         }
@@ -233,7 +235,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-
+              
                 if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()) ||
                     (row.Cells[8].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()) ||
                     (row.Cells[13].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
@@ -244,7 +246,22 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     dataGridView1.CurrentCell = null;
                     dataGridView1.Rows[row.Index].Visible = false;
+                  
                 }
+                if(dataGridView1.Rows[row.Index].Visible  == true && dataGridView1.Rows.Count == 1)
+                {
+                    //dataGridView1.Update();
+                
+                    Console.WriteLine(dataGridView1.Rows[row.Index].Cells[1].Value);
+                }
+   
+      
+                //if (dataGridView1.RowCount == 1)
+                //{
+                //    dataGridView1.CurrentRow.Selected = true;
+
+                //    Console.WriteLine(row);
+                //}
 
             }
         }
@@ -252,25 +269,22 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //1 8 12
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewColumn col = dataGridView1.Columns[e.ColumnIndex];
-            Console.WriteLine(col);
-          
-         
-            switch (e.ColumnIndex)
-            {
-                case 1:
-                    dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
-                    break;
-                case 8:
-                    dataGridView1.Sort(dataGridView1.Columns[8], ListSortDirection.Ascending);
 
-                    break;
-                case 12:
-                    dataGridView1.Sort(dataGridView1.Columns[12], ListSortDirection.Ascending);
-                    break;
-                default:
-                    break;
+
+
+
+    
+            if(e.ColumnIndex == 1)
+            {
+                Console.WriteLine("1");
+               dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
+                
             }
+         
+    
+
+
+
         }
 
 
