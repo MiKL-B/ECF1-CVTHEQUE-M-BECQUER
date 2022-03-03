@@ -64,6 +64,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].Phone,
                     candidats[i].Email,
                     candidats[i].Profil,
+                    //candidats[i].Skills,
                     candidats[i].Skill1,
                     candidats[i].Skill2,
                     candidats[i].Skill3,
@@ -256,13 +257,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 }
    
       
-                //if (dataGridView1.RowCount == 1)
-                //{
-                //    dataGridView1.CurrentRow.Selected = true;
-
-                //    Console.WriteLine(row);
-                //}
-
+                
             }
         }
         //nom, ville profil

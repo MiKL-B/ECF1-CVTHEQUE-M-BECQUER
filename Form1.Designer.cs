@@ -114,15 +114,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1357, 51);
+            this.panel1.Size = new System.Drawing.Size(1560, 51);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LblSearch
             // 
+            this.LblSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblSearch.AutoSize = true;
             this.LblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSearch.Location = new System.Drawing.Point(544, 18);
+            this.LblSearch.Location = new System.Drawing.Point(730, 18);
             this.LblSearch.Name = "LblSearch";
             this.LblSearch.Size = new System.Drawing.Size(100, 20);
             this.LblSearch.TabIndex = 62;
@@ -131,7 +132,7 @@
             // TxtSearch
             // 
             this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtSearch.Location = new System.Drawing.Point(650, 17);
+            this.TxtSearch.Location = new System.Drawing.Point(853, 17);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(144, 20);
             this.TxtSearch.TabIndex = 61;
@@ -140,7 +141,7 @@
             // BtnExport
             // 
             this.BtnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExport.Location = new System.Drawing.Point(1225, 15);
+            this.BtnExport.Location = new System.Drawing.Point(1428, 15);
             this.BtnExport.Name = "BtnExport";
             this.BtnExport.Size = new System.Drawing.Size(120, 23);
             this.BtnExport.TabIndex = 7;
@@ -151,7 +152,7 @@
             // BtnModifCandidat
             // 
             this.BtnModifCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifCandidat.Location = new System.Drawing.Point(848, 15);
+            this.BtnModifCandidat.Location = new System.Drawing.Point(1051, 15);
             this.BtnModifCandidat.Name = "BtnModifCandidat";
             this.BtnModifCandidat.Size = new System.Drawing.Size(174, 23);
             this.BtnModifCandidat.TabIndex = 6;
@@ -162,7 +163,7 @@
             // BtnAjoutCandidat
             // 
             this.BtnAjoutCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAjoutCandidat.Location = new System.Drawing.Point(1028, 15);
+            this.BtnAjoutCandidat.Location = new System.Drawing.Point(1231, 15);
             this.BtnAjoutCandidat.Name = "BtnAjoutCandidat";
             this.BtnAjoutCandidat.Size = new System.Drawing.Size(174, 23);
             this.BtnAjoutCandidat.TabIndex = 5;
@@ -191,13 +192,16 @@
             this.panel2.Location = new System.Drawing.Point(0, 51);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(1357, 716);
+            this.panel2.Size = new System.Drawing.Size(1560, 777);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -230,7 +234,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(9, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1335, 683);
+            this.dataGridView1.RowTemplate.Height = 150;
+            this.dataGridView1.Size = new System.Drawing.Size(1538, 744);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -271,7 +276,6 @@
             this.FirstName.Name = "FirstName";
             this.FirstName.ReadOnly = true;
             this.FirstName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FirstName.Width = 70;
             // 
             // Age
             // 
@@ -281,7 +285,6 @@
             this.Age.Name = "Age";
             this.Age.ReadOnly = true;
             this.Age.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Age.Width = 40;
             // 
             // BirthDate
             // 
@@ -371,6 +374,7 @@
             // Skill1
             // 
             dataGridViewCellStyle14.NullValue = "NULL";
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Skill1.DefaultCellStyle = dataGridViewCellStyle14;
             this.Skill1.HeaderText = "Comp1";
             this.Skill1.Name = "Skill1";
@@ -502,7 +506,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1357, 767);
+            this.ClientSize = new System.Drawing.Size(1560, 828);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";

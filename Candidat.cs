@@ -22,7 +22,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Profil { get; set; }
- 
+ //public string Skills { get; set; }
         public string Skill1 { get; set; }
         public string Skill2 { get; set; }
         public string Skill3 { get; set; }
@@ -83,6 +83,18 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             this.Phone = data[10];
             this.Email = data[11];
             this.Profil = data[12];
+            //this.Skills = data[13] + "\r\n"
+            //            + data[14] + "\r\n"
+            //            + data[15] + "\r\n"
+            //            + data[16] + "\r\n"
+            //            + data[17] + "\r\n"
+            //            + data[18] + "\r\n"
+            //            + data[19] + "\r\n"
+            //            + data[20] + "\r\n"
+            //            + data[21] + "\r\n"
+            //            + data[22] + "\r\n"
+                    
+            //            ;
             this.Skill1 = data[13];
             this.Skill2 = data[14];
             this.Skill3 = data[15];
