@@ -23,7 +23,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
 
             InitializeComponent();
-
+            
             //désactivation du bouton modification
             //il sera activé lors du clic sur le candidat
             BtnModifCandidat.Enabled = false;
@@ -116,12 +116,13 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         private void BtnExport_Click(object sender, EventArgs e)
         {
             Export_Save_data();
-            Process.Start(@".\data\" + "hrdata.csv");
+            Process.Start(@".\data\" + "modifiedData.csv");
         }
 
 
         public void Export_Save_data()
         {
+           
             try
             {
 
@@ -139,12 +140,17 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 //ajout de lignes
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    foreach (DataGridViewCell cell in row.Cells)
+                    if (dataGridView1.Rows[row.Index].Visible)
                     {
-                        if (cell.Value != null)
+               
+                        foreach (DataGridViewCell cell in row.Cells)
                         {
-                            //ajout des datas
-                            csv += cell.Value.ToString().TrimEnd(';').Replace(";", ",") + ';';
+                            if (cell.Value != null)
+                            {
+                                //ajout des datas
+                                csv += cell.Value.ToString().TrimEnd(';').Replace(";", ",") + ';';
+                            }
+
                         }
 
                     }
@@ -159,15 +165,15 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     Directory.CreateDirectory(folderPath);
                 }
 
-                string fileExport = "hrdata.csv";
+                string fileExport = "modifiedData.csv";
 
 
                 File.WriteAllText(folderPath + fileExport, csv);
 
                 //Console.WriteLine(folderPath + fileExport);
-          
 
-                MessageBox.Show("fichier exporté ou sauvegardé");
+
+                //MessageBox.Show("fichier exporté ou sauvegardé");
             }
             catch
             {
@@ -175,7 +181,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             }
         }
 
-
+    
 
 
         //double click sur une personne pour afficher son cv (.pdf / .docx)
@@ -241,25 +247,31 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //8, 3 ,13-22
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
+
+ 
         
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-             
+
+
                 if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
                 {
+
                     dataGridView1.Rows[row.Index].Visible = true;
+                    dataGridView1.Rows[row.Index].Selected = true;
+                  
 
                 }
                 else
                 {
+
                     dataGridView1.CurrentCell = null;
                     dataGridView1.Rows[row.Index].Visible = false;
 
                 }
-
             }
 
-
+           
         }
      
         //nom, ville profil
