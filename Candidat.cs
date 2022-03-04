@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECF1_CVTHEQUE_M_BECQUER
 {
@@ -23,15 +18,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         public string Email { get; set; }
         public string Profil { get; set; }
         public string Skill1 { get; set; }
-        public string Skill2 { get; set; }
-        public string Skill3 { get; set; }
-        public string Skill4 { get; set; }
-        public string Skill5 { get; set; }
-        public string Skill6 { get; set; }
-        public string Skill7 { get; set; }
-        public string Skill8 { get; set; }
-        public string Skill9 { get; set; }
-        public string Skill10 { get; set; }
         public string WebSite { get; set; }
         public string LinkedinProfil { get; set; }
         public string ViadeoProfil { get; set; }
@@ -68,7 +54,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             {
 
             }
-         
+     
             // parse data en propriété
             this.Id = data[0];
             this.LastName = data[1];
@@ -83,15 +69,10 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             this.Email = data[11];
             this.Profil = data[12];
             this.Skill1 = data[13];
-            this.Skill2 = data[14];
-            this.Skill3 = data[15];
-            this.Skill4 = data[16];
-            this.Skill5 = data[17];
-            this.Skill6 = data[18];
-            this.Skill7 = data[19];
-            this.Skill8 = data[20];
-            this.Skill9 = data[21];
-            this.Skill10 = data[22];
+            for (int i = 14; i <= 22; i++)
+            {
+                this.Skill1 += "\n" + data[i];
+            };
             this.WebSite = data[23];
             this.LinkedinProfil = data[24];
             this.ViadeoProfil = data[25];

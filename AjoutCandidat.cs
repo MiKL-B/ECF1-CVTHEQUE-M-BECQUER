@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ECF1_CVTHEQUE_M_BECQUER
@@ -46,15 +37,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                TxtAjoutEmail.Text,
                TxtAjoutProfil.Text,
                TxtAjoutSkill1.Text,
-               TxtAjoutSkill2.Text,
-               TxtAjoutSkill3.Text,
-               TxtAjoutSkill4.Text,
-               TxtAjoutSkill5.Text,
-               TxtAjoutSkill6.Text,
-               TxtAjoutSkill7.Text,
-               TxtAjoutSkill8.Text,
-               TxtAjoutSkill9.Text,
-               TxtAjoutSkill10.Text,
                TxtAjoutWebSite.Text,
                TxtAjoutLinkedin.Text,
                TxtAjoutViadeo.Text,
@@ -91,21 +73,13 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 row.Cells[11].Value = TxtAjoutEmail.Text;
                 row.Cells[12].Value = TxtAjoutProfil.Text;
                 row.Cells[13].Value = TxtAjoutSkill1.Text;
-                row.Cells[14].Value = TxtAjoutSkill2.Text;
-                row.Cells[15].Value = TxtAjoutSkill3.Text;
-                row.Cells[16].Value = TxtAjoutSkill4.Text;
-                row.Cells[17].Value = TxtAjoutSkill5.Text;
-                row.Cells[18].Value = TxtAjoutSkill6.Text;
-                row.Cells[19].Value = TxtAjoutSkill7.Text;
-                row.Cells[20].Value = TxtAjoutSkill8.Text;
-                row.Cells[21].Value = TxtAjoutSkill9.Text;
-                row.Cells[22].Value = TxtAjoutSkill10.Text;
-                row.Cells[23].Value = TxtAjoutWebSite.Text;
-                row.Cells[24].Value = TxtAjoutLinkedin.Text;
-                row.Cells[25].Value = TxtAjoutViadeo.Text;
-                row.Cells[26].Value = TxtAjoutFacebook.Text;
-              
-       
+                row.Cells[14].Value = TxtAjoutWebSite.Text;
+                row.Cells[15].Value = TxtAjoutLinkedin.Text;
+                row.Cells[16].Value = TxtAjoutViadeo.Text;
+                row.Cells[17].Value = TxtAjoutFacebook.Text;
+
+           
+             
                 MessageBox.Show("update");
                 try
                 {
@@ -139,15 +113,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 TxtAjoutEmail.Text = candidat.Email;
                 TxtAjoutProfil.Text = candidat.Profil;
                 TxtAjoutSkill1.Text = candidat.Skill1;
-                TxtAjoutSkill2.Text = candidat.Skill2;
-                TxtAjoutSkill3.Text = candidat.Skill3;
-                TxtAjoutSkill4.Text = candidat.Skill4;
-                TxtAjoutSkill5.Text = candidat.Skill5;
-                TxtAjoutSkill6.Text = candidat.Skill6;
-                TxtAjoutSkill7.Text = candidat.Skill7;
-                TxtAjoutSkill8.Text = candidat.Skill8;
-                TxtAjoutSkill9.Text = candidat.Skill9;
-                TxtAjoutSkill10.Text = candidat.Skill10;
                 TxtAjoutWebSite.Text = candidat.WebSite;
                 TxtAjoutLinkedin.Text = candidat.LinkedinProfil;
                 TxtAjoutViadeo.Text = candidat.ViadeoProfil;

@@ -1,15 +1,9 @@
-﻿using CsvHelper;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ECF1_CVTHEQUE_M_BECQUER
@@ -65,15 +59,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                     candidats[i].Email,
                     candidats[i].Profil,
                     candidats[i].Skill1,
-                    candidats[i].Skill2,
-                    candidats[i].Skill3,
-                    candidats[i].Skill4,
-                    candidats[i].Skill5,
-                    candidats[i].Skill6,
-                    candidats[i].Skill7,
-                    candidats[i].Skill8,
-                    candidats[i].Skill9,
-                    candidats[i].Skill10,
                     candidats[i].WebSite,
                     candidats[i].LinkedinProfil,
                     candidats[i].ViadeoProfil,
@@ -173,7 +158,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 //Console.WriteLine(folderPath + fileExport);
 
 
-                //MessageBox.Show("fichier exporté ou sauvegardé");
+                MessageBox.Show("fichier exporté ou sauvegardé dans : ./data/modifiedData.csv" );
             }
             catch
             {
@@ -259,7 +244,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
                     dataGridView1.Rows[row.Index].Visible = true;
                     dataGridView1.Rows[row.Index].Selected = true;
-                  
+
 
                 }
                 else
