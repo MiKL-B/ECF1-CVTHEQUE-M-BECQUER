@@ -69,9 +69,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
      
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
+    
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -104,7 +102,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             Process.Start(@".\data\" + "modifiedData.csv");
         }
 
-
+        //function export / save
         public void Export_Save_data()
         {
            
@@ -166,9 +164,6 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             }
         }
 
-    
-
-
         //double click sur une personne pour afficher son cv (.pdf / .docx)
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -201,6 +196,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
           
 
         }
+
         //choisit un candidat au clic et le surligne et permet sa modification 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -232,47 +228,23 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         //8, 3 ,13-22
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
-
- 
-        
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-
-
                 if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
                 {
-
                     dataGridView1.Rows[row.Index].Visible = true;
                     dataGridView1.Rows[row.Index].Selected = true;
-
-
                 }
                 else
                 {
-
                     dataGridView1.CurrentCell = null;
                     dataGridView1.Rows[row.Index].Visible = false;
-
                 }
             }
 
            
         }
      
-        //nom, ville profil
-        //1 8 12
-        private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-            if(e.ColumnIndex == 1)
-            {
-                Console.WriteLine("1");
-               dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
-                
-            }
-
-        }
-
 
     }
 }
