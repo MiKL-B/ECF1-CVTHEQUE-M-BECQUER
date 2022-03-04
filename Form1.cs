@@ -223,14 +223,16 @@ namespace ECF1_CVTHEQUE_M_BECQUER
         }
 
        
-        //filtre via la textbox TxtSearch
-        //ville, age, compétence
-        //8, 3 ,13-22
+        //filtre ville age et compétence via la textbox TxtSearch
+
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
+              
+                if ((row.Cells[3].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()) ||
+                    (row.Cells[8].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()) ||
+                    (row.Cells[13].Value).ToString().ToUpper().Contains(TxtSearch.Text.ToUpper()))
                 {
                     dataGridView1.Rows[row.Index].Visible = true;
                     dataGridView1.Rows[row.Index].Selected = true;
