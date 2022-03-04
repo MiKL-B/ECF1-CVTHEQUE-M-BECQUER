@@ -22,37 +22,44 @@ namespace ECF1_CVTHEQUE_M_BECQUER
             //si il n'y a pas de candidats, les champs se remplissent suivant la saisie de l'utilisateur
             if (candidat == null)
             {
-                form.dataGridView1.Rows.Add(
-               form.dataGridView1.Rows.Count + 1,
-               TxtAjoutNom.Text,
-               TxtAjoutPrenom.Text,
-               TxtAjoutAge.Text,
-               TxtAjoutBirthDate.Text,
-               TxtAjoutAddress.Text,
-               TxtAjoutAddress1.Text,
-               TxtAjoutCodePostal.Text,
-               TxtAjoutVille.Text,
-               TxtAjoutSmartPhone.Text,
-               TxtAjoutPhone.Text,
-               TxtAjoutEmail.Text,
-               TxtAjoutProfil.Text,
-               TxtAjoutSkill1.Text,
-               TxtAjoutWebSite.Text,
-               TxtAjoutLinkedin.Text,
-               TxtAjoutViadeo.Text,
-               TxtAjoutFacebook.Text
+                if(TxtAjoutNom.Text != "" && TxtAjoutPrenom.Text != "" && TxtAjoutBirthDate.Text != "" && TxtAjoutSmartPhone.Text !="" && TxtAjoutEmail.Text != "" && TxtAjoutProfil.Text != "")
+                {
+                  form.dataGridView1.Rows.Add(
+                  form.dataGridView1.Rows.Count + 1,
+                  TxtAjoutNom.Text,
+                  TxtAjoutPrenom.Text,
+                  TxtAjoutAge.Text,
+                  TxtAjoutBirthDate.Text,
+                  TxtAjoutAddress.Text,
+                  TxtAjoutAddress1.Text,
+                  TxtAjoutCodePostal.Text,
+                  TxtAjoutVille.Text,
+                  TxtAjoutSmartPhone.Text,
+                  TxtAjoutPhone.Text,
+                  TxtAjoutEmail.Text,
+                  TxtAjoutProfil.Text,
+                  TxtAjoutSkill1.Text,
+                  TxtAjoutWebSite.Text,
+                  TxtAjoutLinkedin.Text,
+                  TxtAjoutViadeo.Text,
+                  TxtAjoutFacebook.Text
+                                        );
 
-               );
-             
-                try
-                {
-                    form.Export_Save_data();
+                    try
+                    {
+                        form.Export_Save_data();
+                    }
+                    catch
+                    {
+        
+                    }
+                    Close();
                 }
-                catch
+                else
                 {
-                    
+                    MessageBox.Show("Lex champs en rouge sont obligatoire !");
                 }
-                Close();
+               
             }
             else
             {
