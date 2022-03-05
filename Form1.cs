@@ -67,7 +67,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 }
             //tri par défaut par nom de candidat
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
-     
+       
         }
     
 
@@ -227,6 +227,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
+           
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
               
@@ -236,6 +237,7 @@ namespace ECF1_CVTHEQUE_M_BECQUER
                 {
                     dataGridView1.Rows[row.Index].Visible = true;
                     dataGridView1.Rows[row.Index].Selected = true;
+              
                 }
                 else
                 {

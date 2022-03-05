@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblSearch = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
@@ -57,8 +57,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +75,8 @@
             this.LinkedinProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViadeoProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacebookProfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.candidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,7 +96,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1687, 51);
+            this.panel1.Size = new System.Drawing.Size(1012, 51);
             this.panel1.TabIndex = 0;
             // 
             // LblSearch
@@ -104,7 +104,7 @@
             this.LblSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblSearch.AutoSize = true;
             this.LblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSearch.Location = new System.Drawing.Point(857, 18);
+            this.LblSearch.Location = new System.Drawing.Point(182, 18);
             this.LblSearch.Name = "LblSearch";
             this.LblSearch.Size = new System.Drawing.Size(100, 20);
             this.LblSearch.TabIndex = 62;
@@ -113,7 +113,7 @@
             // TxtSearch
             // 
             this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtSearch.Location = new System.Drawing.Point(980, 17);
+            this.TxtSearch.Location = new System.Drawing.Point(305, 17);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(144, 20);
             this.TxtSearch.TabIndex = 61;
@@ -122,7 +122,7 @@
             // BtnExport
             // 
             this.BtnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExport.Location = new System.Drawing.Point(1555, 15);
+            this.BtnExport.Location = new System.Drawing.Point(880, 15);
             this.BtnExport.Name = "BtnExport";
             this.BtnExport.Size = new System.Drawing.Size(120, 23);
             this.BtnExport.TabIndex = 7;
@@ -133,7 +133,7 @@
             // BtnModifCandidat
             // 
             this.BtnModifCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifCandidat.Location = new System.Drawing.Point(1178, 15);
+            this.BtnModifCandidat.Location = new System.Drawing.Point(503, 15);
             this.BtnModifCandidat.Name = "BtnModifCandidat";
             this.BtnModifCandidat.Size = new System.Drawing.Size(174, 23);
             this.BtnModifCandidat.TabIndex = 6;
@@ -144,7 +144,7 @@
             // BtnAjoutCandidat
             // 
             this.BtnAjoutCandidat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAjoutCandidat.Location = new System.Drawing.Point(1358, 15);
+            this.BtnAjoutCandidat.Location = new System.Drawing.Point(683, 15);
             this.BtnAjoutCandidat.Name = "BtnAjoutCandidat";
             this.BtnAjoutCandidat.Size = new System.Drawing.Size(174, 23);
             this.BtnAjoutCandidat.TabIndex = 5;
@@ -173,7 +173,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 51);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(1687, 777);
+            this.panel2.Size = new System.Drawing.Size(1012, 777);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -207,10 +207,178 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 100;
-            this.dataGridView1.Size = new System.Drawing.Size(1665, 744);
+            this.dataGridView1.Size = new System.Drawing.Size(990, 744);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Id
+            // 
+            dataGridViewCellStyle1.NullValue = "NULL";
+            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Id.HeaderText = "id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Id.Visible = false;
+            // 
+            // LastName
+            // 
+            dataGridViewCellStyle2.NullValue = "NULL";
+            this.LastName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.LastName.HeaderText = "Nom";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            dataGridViewCellStyle3.NullValue = "NULL";
+            this.FirstName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FirstName.HeaderText = "Prénom";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            this.FirstName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Age
+            // 
+            dataGridViewCellStyle4.NullValue = "NULL";
+            this.Age.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Age.HeaderText = "Age";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // BirthDate
+            // 
+            dataGridViewCellStyle5.NullValue = "NULL";
+            this.BirthDate.DefaultCellStyle = dataGridViewCellStyle5;
+            this.BirthDate.HeaderText = "Date de naissance";
+            this.BirthDate.Name = "BirthDate";
+            this.BirthDate.ReadOnly = true;
+            this.BirthDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Address
+            // 
+            dataGridViewCellStyle6.NullValue = "NULL";
+            this.Address.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Address.HeaderText = "Adresse";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Address.Visible = false;
+            // 
+            // Address1
+            // 
+            dataGridViewCellStyle7.NullValue = "NULL";
+            this.Address1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Address1.HeaderText = "Adresse 1";
+            this.Address1.Name = "Address1";
+            this.Address1.ReadOnly = true;
+            this.Address1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Address1.Visible = false;
+            // 
+            // CodePostal
+            // 
+            dataGridViewCellStyle8.NullValue = "NULL";
+            this.CodePostal.DefaultCellStyle = dataGridViewCellStyle8;
+            this.CodePostal.HeaderText = "Code postal";
+            this.CodePostal.Name = "CodePostal";
+            this.CodePostal.ReadOnly = true;
+            this.CodePostal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.CodePostal.Visible = false;
+            // 
+            // Ville
+            // 
+            dataGridViewCellStyle9.NullValue = "NULL";
+            this.Ville.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Ville.HeaderText = "Ville";
+            this.Ville.Name = "Ville";
+            this.Ville.ReadOnly = true;
+            // 
+            // SmartPhone
+            // 
+            dataGridViewCellStyle10.NullValue = "NULL";
+            this.SmartPhone.DefaultCellStyle = dataGridViewCellStyle10;
+            this.SmartPhone.HeaderText = "Portable";
+            this.SmartPhone.Name = "SmartPhone";
+            this.SmartPhone.ReadOnly = true;
+            this.SmartPhone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Phone
+            // 
+            dataGridViewCellStyle11.NullValue = "NULL";
+            this.Phone.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Phone.HeaderText = "Fixe";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            this.Phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Phone.Visible = false;
+            // 
+            // Email
+            // 
+            dataGridViewCellStyle12.NullValue = "NULL";
+            this.Email.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Profil
+            // 
+            dataGridViewCellStyle13.NullValue = "NULL";
+            this.Profil.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Profil.HeaderText = "Profil";
+            this.Profil.Name = "Profil";
+            this.Profil.ReadOnly = true;
+            // 
+            // Skill1
+            // 
+            dataGridViewCellStyle14.NullValue = "NULL";
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Skill1.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Skill1.HeaderText = "Comp1";
+            this.Skill1.Name = "Skill1";
+            this.Skill1.ReadOnly = true;
+            this.Skill1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // WebSite
+            // 
+            dataGridViewCellStyle15.NullValue = "NULL";
+            this.WebSite.DefaultCellStyle = dataGridViewCellStyle15;
+            this.WebSite.HeaderText = "Site web";
+            this.WebSite.Name = "WebSite";
+            this.WebSite.ReadOnly = true;
+            this.WebSite.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.WebSite.Visible = false;
+            // 
+            // LinkedinProfil
+            // 
+            dataGridViewCellStyle16.NullValue = "NULL";
+            this.LinkedinProfil.DefaultCellStyle = dataGridViewCellStyle16;
+            this.LinkedinProfil.HeaderText = "Linkedin";
+            this.LinkedinProfil.Name = "LinkedinProfil";
+            this.LinkedinProfil.ReadOnly = true;
+            this.LinkedinProfil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.LinkedinProfil.Visible = false;
+            // 
+            // ViadeoProfil
+            // 
+            dataGridViewCellStyle17.NullValue = "NULL";
+            this.ViadeoProfil.DefaultCellStyle = dataGridViewCellStyle17;
+            this.ViadeoProfil.HeaderText = "Viadeo";
+            this.ViadeoProfil.Name = "ViadeoProfil";
+            this.ViadeoProfil.ReadOnly = true;
+            this.ViadeoProfil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ViadeoProfil.Visible = false;
+            // 
+            // FacebookProfil
+            // 
+            dataGridViewCellStyle18.NullValue = "NULL";
+            this.FacebookProfil.DefaultCellStyle = dataGridViewCellStyle18;
+            this.FacebookProfil.HeaderText = "Facebook";
+            this.FacebookProfil.Name = "FacebookProfil";
+            this.FacebookProfil.ReadOnly = true;
+            this.FacebookProfil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.FacebookProfil.Visible = false;
             // 
             // candidatBindingSource
             // 
@@ -220,179 +388,11 @@
             // 
             this.candidatBindingSource1.DataSource = typeof(ECF1_CVTHEQUE_M_BECQUER.Candidat);
             // 
-            // Id
-            // 
-            dataGridViewCellStyle37.NullValue = "NULL";
-            this.Id.DefaultCellStyle = dataGridViewCellStyle37;
-            this.Id.HeaderText = "id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Id.Visible = false;
-            // 
-            // LastName
-            // 
-            dataGridViewCellStyle38.NullValue = "NULL";
-            this.LastName.DefaultCellStyle = dataGridViewCellStyle38;
-            this.LastName.HeaderText = "Nom";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            // 
-            // FirstName
-            // 
-            dataGridViewCellStyle39.NullValue = "NULL";
-            this.FirstName.DefaultCellStyle = dataGridViewCellStyle39;
-            this.FirstName.HeaderText = "Prénom";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            this.FirstName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Age
-            // 
-            dataGridViewCellStyle40.NullValue = "NULL";
-            this.Age.DefaultCellStyle = dataGridViewCellStyle40;
-            this.Age.HeaderText = "Age";
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            // 
-            // BirthDate
-            // 
-            dataGridViewCellStyle41.NullValue = "NULL";
-            this.BirthDate.DefaultCellStyle = dataGridViewCellStyle41;
-            this.BirthDate.HeaderText = "Date de naissance";
-            this.BirthDate.Name = "BirthDate";
-            this.BirthDate.ReadOnly = true;
-            this.BirthDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Address
-            // 
-            dataGridViewCellStyle42.NullValue = "NULL";
-            this.Address.DefaultCellStyle = dataGridViewCellStyle42;
-            this.Address.HeaderText = "Adresse";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Address.Visible = false;
-            // 
-            // Address1
-            // 
-            dataGridViewCellStyle43.NullValue = "NULL";
-            this.Address1.DefaultCellStyle = dataGridViewCellStyle43;
-            this.Address1.HeaderText = "Adresse 1";
-            this.Address1.Name = "Address1";
-            this.Address1.ReadOnly = true;
-            this.Address1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Address1.Visible = false;
-            // 
-            // CodePostal
-            // 
-            dataGridViewCellStyle44.NullValue = "NULL";
-            this.CodePostal.DefaultCellStyle = dataGridViewCellStyle44;
-            this.CodePostal.HeaderText = "Code postal";
-            this.CodePostal.Name = "CodePostal";
-            this.CodePostal.ReadOnly = true;
-            this.CodePostal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.CodePostal.Visible = false;
-            // 
-            // Ville
-            // 
-            dataGridViewCellStyle45.NullValue = "NULL";
-            this.Ville.DefaultCellStyle = dataGridViewCellStyle45;
-            this.Ville.HeaderText = "Ville";
-            this.Ville.Name = "Ville";
-            this.Ville.ReadOnly = true;
-            // 
-            // SmartPhone
-            // 
-            dataGridViewCellStyle46.NullValue = "NULL";
-            this.SmartPhone.DefaultCellStyle = dataGridViewCellStyle46;
-            this.SmartPhone.HeaderText = "Portable";
-            this.SmartPhone.Name = "SmartPhone";
-            this.SmartPhone.ReadOnly = true;
-            this.SmartPhone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Phone
-            // 
-            dataGridViewCellStyle47.NullValue = "NULL";
-            this.Phone.DefaultCellStyle = dataGridViewCellStyle47;
-            this.Phone.HeaderText = "Fixe";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            this.Phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Phone.Visible = false;
-            // 
-            // Email
-            // 
-            dataGridViewCellStyle48.NullValue = "NULL";
-            this.Email.DefaultCellStyle = dataGridViewCellStyle48;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Profil
-            // 
-            dataGridViewCellStyle49.NullValue = "NULL";
-            this.Profil.DefaultCellStyle = dataGridViewCellStyle49;
-            this.Profil.HeaderText = "Profil";
-            this.Profil.Name = "Profil";
-            this.Profil.ReadOnly = true;
-            // 
-            // Skill1
-            // 
-            dataGridViewCellStyle50.NullValue = "NULL";
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Skill1.DefaultCellStyle = dataGridViewCellStyle50;
-            this.Skill1.HeaderText = "Comp1";
-            this.Skill1.Name = "Skill1";
-            this.Skill1.ReadOnly = true;
-            this.Skill1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // WebSite
-            // 
-            dataGridViewCellStyle51.NullValue = "NULL";
-            this.WebSite.DefaultCellStyle = dataGridViewCellStyle51;
-            this.WebSite.HeaderText = "Site web";
-            this.WebSite.Name = "WebSite";
-            this.WebSite.ReadOnly = true;
-            this.WebSite.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.WebSite.Visible = false;
-            // 
-            // LinkedinProfil
-            // 
-            dataGridViewCellStyle52.NullValue = "NULL";
-            this.LinkedinProfil.DefaultCellStyle = dataGridViewCellStyle52;
-            this.LinkedinProfil.HeaderText = "Linkedin";
-            this.LinkedinProfil.Name = "LinkedinProfil";
-            this.LinkedinProfil.ReadOnly = true;
-            this.LinkedinProfil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.LinkedinProfil.Visible = false;
-            // 
-            // ViadeoProfil
-            // 
-            dataGridViewCellStyle53.NullValue = "NULL";
-            this.ViadeoProfil.DefaultCellStyle = dataGridViewCellStyle53;
-            this.ViadeoProfil.HeaderText = "Viadeo";
-            this.ViadeoProfil.Name = "ViadeoProfil";
-            this.ViadeoProfil.ReadOnly = true;
-            this.ViadeoProfil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ViadeoProfil.Visible = false;
-            // 
-            // FacebookProfil
-            // 
-            dataGridViewCellStyle54.NullValue = "NULL";
-            this.FacebookProfil.DefaultCellStyle = dataGridViewCellStyle54;
-            this.FacebookProfil.HeaderText = "Facebook";
-            this.FacebookProfil.Name = "FacebookProfil";
-            this.FacebookProfil.ReadOnly = true;
-            this.FacebookProfil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FacebookProfil.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1687, 828);
+            this.ClientSize = new System.Drawing.Size(1012, 828);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
